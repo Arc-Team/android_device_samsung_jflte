@@ -1,4 +1,4 @@
-# Inherit
+# Inherit 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
@@ -13,7 +13,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
@@ -40,26 +42,24 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     libaudio-resampler
 
+# Camera Wrapper
+PRODUCT_PACKAGES += \
+    camera.MSM8960
+
 # HAL
 PRODUCT_PACKAGES += \
     copybit.msm8960 \
     gralloc.msm8960 \
     hwcomposer.msm8960 \
-    power.msm8960
-
-# GalaxyS3Settings
-PRODUCT_PACKAGES += \
-    GalaxyS3Settings \
-    SamsungServiceMode
+    power.msm8960 \
+    memtrack.msm8960
 
 # QCOM Display
 PRODUCT_PACKAGES += \
     libgenlock \
     libmemalloc \
     liboverlay \
-    libqdutils \
-    libtilerenderer \
-    libI420colorconvert
+    libqdutils
 
 # Omx
 PRODUCT_PACKAGES += \
@@ -106,10 +106,7 @@ PRODUCT_PACKAGES += \
     thermald-8930ab.conf \
     thermald-8960.conf \
     thermald-8960ab.conf \
-    thermal-engine-8064ab.conf \
-    thermal-engine-8064.conf \
-    thermal-engine-8930.conf \
-    thermal-engine-8960.conf
+    thermal-engine-8064ab.conf
 
 # Init scripts
 PRODUCT_PACKAGES += \
@@ -135,7 +132,7 @@ PRODUCT_PACKAGES += \
     initlogo.rle \
     init.bt.rc \
     init.carrier.rc \
-    init.crda.rc \
+    init.crda.sh \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
@@ -148,12 +145,11 @@ PRODUCT_PACKAGES += \
     VisualizationWallpapers \
     librs_jni
 
-# Misc
 PRODUCT_PACKAGES += \
     Torch \
     lights.msm8960 \
+    consumerir.msm8960 \
     libtime_genoff \
-    irda.msm8960 \
     com.android.future.usb.accessory
 
 # GPS
@@ -174,12 +170,12 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/proprietary/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
     device/samsung/jfltetmo/proprietary/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
 
-# Media Config
+# Media Profile
 PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/proprietary/etc/media_codecs.xml:system/etc/media_codecs.xml \
-    device/samsung/jfltetmo/proprietary/etc/media_profiles.xml:system/etc/media_profiles.xml
+    device/samsung/jfltetmo/proprietary/etc/media_profiles.xml:system/etc/media_profiles.xml \
+    device/samsung/jfltetmo/proprietary/etc/media_codecs.xml:system/etc/media_codecs.xml
 
-# Recovery
+# Needed to reset bootmode when leaving recovery
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
     device/samsung/jfltetmo/recovery/postrecoveryboot.sh:recovery/system/bin/postrecoveryboot.sh
@@ -188,14 +184,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/proprietary/vendor/firmware/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
 
-# Expose Irda feature
-PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/proprietary/etc/permissions/com.sec.feature.irda_service.xml:system/etc/permissions/com.sec.feature.irda_service.xml
-
 # Audio configuration
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/proprietary/etc/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
-    device/samsung/jfltetmo/proprietary/etc/audio_policy.conf:system/etc/audio_policy.conf
+    device/samsung/jfltetmo/proprietary/etc/audio_policy.conf:system/etc/audio_policy.conf \
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -205,9 +197,9 @@ PRODUCT_COPY_FILES += \
 # Keychars
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/proprietary/usr/keychars/Generic.kcm:system/usr/keychars/Generic.kcm \
-    device/samsung/jfltetmo/proprietary/usr/keychars/Virtual.kcm:system/usr/keychars/Virtual.kcm
+    device/samsung/jfltetmo/proprietary/usr/Virtual.kcm:system/usr/keychars/Virtual.kcm
 
-# keylayouts
+# Keylayouts
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/proprietary/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/samsung/jfltetmo/proprietary/usr/keylayout/Button_Jack.kl:system/usr/keylayout/Button_Jack.kl \
@@ -284,24 +276,18 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/proprietary/etc/wifi/nvram_net.txt_semco3rd_a0:system/etc/wifi/nvram_net.txt_semco3rd_a0 \
     device/samsung/jfltetmo/proprietary/etc/wifi/nvram_net.txt_semcosh:system/etc/wifi/nvram_net.txt_semcosh \
     device/samsung/jfltetmo/proprietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/samsung/jfltetmo/proprietary/lib/egl/eglsubAndroid.so:system/lib/egl/eglsubAndroid.so \
-    device/samsung/jfltetmo/proprietary/lib/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
-    device/samsung/jfltetmo/proprietary/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
-    device/samsung/jfltetmo/proprietary/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
-    device/samsung/jfltetmo/proprietary/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
-    device/samsung/jfltetmo/proprietary/lib/hw/camera.msm8960.so:system/lib/hw/camera.msm8960.so \
+    device/samsung/jfltetmo/proprietary/lib/hw/camera.vendor.msm8960.so:system/lib/hw/camera.vendor.msm8960.so \
     device/samsung/jfltetmo/proprietary/lib/hw/sensorhubs.msm8960.so:system/lib/hw/sensorhubs.msm8960.so \
     device/samsung/jfltetmo/proprietary/lib/hw/sensors.msm8960.so:system/lib/hw/sensors.msm8960.so \
-    device/samsung/jfltetmo/proprietary/lib/libC2D2.so:system/lib/libC2D2.so \
+    device/samsung/jfltetmo/proprietary/lib/libCB.so:system/lib/libCB.so \
     device/samsung/jfltetmo/proprietary/lib/libExtendedExtractor.so:system/lib/libExtendedExtractor.so \
-    device/samsung/jfltetmo/proprietary/lib/libOpenCL.so:system/lib/libOpenCL.so \
-    device/samsung/jfltetmo/proprietary/lib/libOpenVG.so:system/lib/libOpenVG.so \
     device/samsung/jfltetmo/proprietary/lib/libQSEEComAPI.so:system/lib/libQSEEComAPI.so \
     device/samsung/jfltetmo/proprietary/lib/libWVStreamControlAPI_L1.so:system/lib/libWVStreamControlAPI_L1.so \
     device/samsung/jfltetmo/proprietary/lib/libacdbloader.so:system/lib/libacdbloader.so \
+    device/samsung/jfltetmo/proprietary/lib/libadreno_utils.so:system/lib/libadreno_utils.so \
+    device/samsung/jfltetmo/proprietary/lib/libadsprpc.so:system/lib/libadsprpc.so \
     device/samsung/jfltetmo/proprietary/lib/libatparser.so:system/lib/libatparser.so \
     device/samsung/jfltetmo/proprietary/lib/libaudcal.so:system/lib/libaudcal.so \
-    device/samsung/jfltetmo/proprietary/lib/libc2d2_a3xx.so:system/lib/libc2d2_a3xx.so \
     device/samsung/jfltetmo/proprietary/lib/libchromatix_imx074_default_video.so:system/lib/libchromatix_imx074_default_video.so \
     device/samsung/jfltetmo/proprietary/lib/libchromatix_imx074_preview.so:system/lib/libchromatix_imx074_preview.so \
     device/samsung/jfltetmo/proprietary/lib/libchromatix_imx074_video_hd.so:system/lib/libchromatix_imx074_video_hd.so \
@@ -349,12 +335,10 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/proprietary/lib/libfactoryutil.so:system/lib/libfactoryutil.so \
     device/samsung/jfltetmo/proprietary/lib/libgemini.so:system/lib/libgemini.so \
     device/samsung/jfltetmo/proprietary/lib/libgeofence.so:system/lib/libgeofence.so \
-    device/samsung/jfltetmo/proprietary/lib/libgsl.so:system/lib/libgsl.so \
     device/samsung/jfltetmo/proprietary/lib/libhdcp2.so:system/lib/libhdcp2.so \
     device/samsung/jfltetmo/proprietary/lib/libidl.so:system/lib/libidl.so \
     device/samsung/jfltetmo/proprietary/lib/libimage-jpeg-enc-omx-comp.so:system/lib/libimage-jpeg-enc-omx-comp.so \
     device/samsung/jfltetmo/proprietary/lib/libimage-omx-common.so:system/lib/libimage-omx-common.so \
-    device/samsung/jfltetmo/proprietary/lib/libllvm-a3xx.so:system/lib/libllvm-a3xx.so \
     device/samsung/jfltetmo/proprietary/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
     device/samsung/jfltetmo/proprietary/lib/libmercury.so:system/lib/libmercury.so \
     device/samsung/jfltetmo/proprietary/lib/libmm-color-convertor.so:system/lib/libmm-color-convertor.so \
@@ -393,11 +377,10 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/proprietary/lib/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \
     device/samsung/jfltetmo/proprietary/lib/libril.so:system/lib/libril.so \
     device/samsung/jfltetmo/proprietary/lib/libsam.so:system/lib/libsam.so \
-    device/samsung/jfltetmo/proprietary/lib/libsc-a3xx.so:system/lib/libsc-a3xx.so \
     device/samsung/jfltetmo/proprietary/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
     device/samsung/jfltetmo/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \
     device/samsung/jfltetmo/proprietary/lib/libsensirion_j1.so:system/lib/libsensirion_j1.so \
-    device/samsung/jfltetmo/proprietary/lib/libtime_genoff.so:objy/lib/libtime_genoff.so \
+    device/samsung/jfltetmo/proprietary/lib/libtime_genoff.so:obj/lib/libtime_genoff.so \
     device/samsung/jfltetmo/proprietary/lib/libtime_genoff.so:system/lib/libtime_genoff.so \
     device/samsung/jfltetmo/proprietary/lib/libvdis.so:system/lib/libvdis.so \
     device/samsung/jfltetmo/proprietary/lib/libwvm.so:system/lib/libwvm.so \
@@ -406,7 +389,28 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/proprietary/vendor/firmware/bcm4335.hcd:system/vendor/firmware/bcm4335.hcd \
     device/samsung/jfltetmo/proprietary/vendor/firmware/bcm4335_A0.hcd:system/vendor/firmware/bcm4335_A0.hcd \
     device/samsung/jfltetmo/proprietary/vendor/firmware/bcm4335_murata.hcd:system/vendor/firmware/bcm4335_murata.hcd \
-    device/samsung/jfltetmo/proprietary/vendor/firmware/bcm4335_semco.hcd:system/vendor/firmware/bcm4335_semco.hcd
+    device/samsung/jfltetmo/proprietary/vendor/firmware/bcm4335_semco.hcd:system/vendor/firmware/bcm4335_semco.hcd \
+    device/samsung/jfltetmo/proprietary/vendor/lib/egl/eglsubAndroid.so:system/vendor/lib/egl/eglsubAndroid.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/egl/libEGL_adreno.so:system/vendor/lib/egl/libEGL_adreno.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/egl/libGLESv1_CM_adreno.so:system/vendor/lib/egl/libGLESv1_CM_adreno.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/egl/libGLESv2S3D_adreno.so:system/vendor/lib/egl/libGLESv2S3D_adreno.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/egl/libGLESv2_adreno.so:system/vendor/lib/egl/libGLESv2_adreno.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/egl/libq3dtools_adreno.so:system/vendor/lib/egl/libq3dtools_adreno.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/libC2D2.so:system/vendor/lib/libC2D2.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/libOpenCL.so:system/vendor/lib/libOpenCL.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/libOpenVG.so:system/vendor/lib/libOpenVG.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/libc2d30.so:system/vendor/lib/libc2d30.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/libgsl.so:system/vendor/lib/libgsl.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/libllvm-a3xx.so:system/vendor/lib/libllvm-a3xx.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/libqc-opt.so:system/vendor/lib/libqc-opt.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/librs_adreno.so:system/vendor/lib/librs_adreno.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/librs_adreno_sha1.so:system/vendor/lib/librs_adreno_sha1.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so \
+    device/samsung/jfltetmo/proprietary/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so
 
 # Charger
 PRODUCT_PACKAGES += charger charger_res_images
@@ -425,10 +429,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
-# Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cwm.enable_key_repeat=true \
     ro.cwm.repeatable_keys=114,115 \
+    wifi.interface=wlan0 \
     ro.chipname=apq8064 \
     ro.ril.hsxpa=1 \
     ro.ril.gprsclass=10 \
@@ -448,6 +452,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.speaker.location=high \
     ro.qc.sdk.audio.fluencetype=fluence \
     persist.timed.enable=true \
+    persist.fuse_sdcard=true \
     ro.emmc.sdcard.partition=17 \
     ro.use_data_netmgrd=true \
     persist.data.ds_fmc_app.mode=0 \
@@ -462,6 +467,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.no_wait_for_card=0 \
     keyguard.no_require_sim=true \
     media.aac_51_output_enabled=true \
+    mm.enable.smoothstreaming=true \
     persist.rild.nitz_plmn="" \
     persist.rild.nitz_long_ons_0="" \
     persist.rild.nitz_long_ons_1="" \
@@ -475,7 +481,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/system/lib/libqc-opt.so \
     debug.sf.hw=1 \
     debug.egl.hw=1 \
-    debug.composition.type=dyn \
     persist.hwc.mdpcomp.enable=true \
     debug.mdpcomp.logs=0 \
     ro.telephony.ril_class=SamsungQualcommRIL \

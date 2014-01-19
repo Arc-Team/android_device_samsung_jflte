@@ -18,7 +18,6 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_SMP := true
 
 # Flags for Krait CPU
-COMMON_GLOBAL_CFLAGS += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64
 COMMON_GLOBAL_CFLAGS += -DNEW_ION_API
 TARGET_GLOBAL_CFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
@@ -48,9 +47,12 @@ TARGET_USES_QCOM_COMPRESSED_AUDIO := true
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
+TARGET_USES_QCOM_BSP := true
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP
 TARGET_QCOM_AUDIO_VARIANT := caf
 TARGET_QCOM_DISPLAY_VARIANT := caf
 TARGET_QCOM_MEDIA_VARIANT := caf
+BOARD_USES_LEGACY_ALSA_AUDIO := true
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 # Graphics
@@ -58,7 +60,7 @@ USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
-BOARD_EGL_CFG := device/samsung/jfltetmo/proprietary/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/samsung/jfltetmo/proprietary/vendor/lib/egl/egl.cfg
 
 # Wifi
 WIFI_BAND := 802_11_ABG
@@ -115,16 +117,17 @@ BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charg
 BOARD_BATTERY_DEVICE_NAME := "battery"
 
 # Camera
+TARGET_NEED_CAMERA_ZSL := true
+TARGET_NEED_SAMSUNG_MAGIC_ZSL_1508 := true
+TARGET_ADD_ISO_MODE_1600 := true
+TARGET_ADD_ISO_MODE_HJR := true
+TARGET_PROVIDES_CAMERA_HAL := true
+USE_DEVICE_SPECIFIC_CAMERA := true
 COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE
-COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 
 # NFC
 BOARD_HAVE_NFC := true
 BOARD_NFC_HAL_SUFFIX := msm8960
-
-# Webkit
-TARGET_FORCE_CPU_UPLOAD := true
-ENABLE_WEBGL := true
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/jfltetmo
 
@@ -152,10 +155,15 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 28
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
+# Adreno
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+HAVE_ADRENO_SOURCE := false
 
-# FM Radio
-# BOARD_HAVE_FM_RADIO := true
-# BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
+# Needed for blobs
+COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
+
+# Override healthd
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
 
 # Kernel time optimization
 # temp remove - causing issues with short/long presses
@@ -167,30 +175,23 @@ BOARD_SEPOLICY_DIRS += \
 
 BOARD_SEPOLICY_UNION += \
 	file_contexts \
-	property_contexts \
-	te_macros \
-	bluetooth_loader.te \
-	bridge.te \
-	camera.te \
-	conn_init.te \
+	app.te \
+	bluetooth.te \
 	device.te \
-	dhcp.te \
 	domain.te \
 	drmserver.te \
 	file.te \
+	hci_init.te \
+	healthd.te \
 	init.te \
+	init_shell.te \
+	keystore.te \
 	kickstart.te \
 	mediaserver.te \
-	mpdecision.te \
-	netmgrd.te \
-	property.te \
-	qmux.te \
+	nfc.te \
 	rild.te \
-	rmt.te \
-	sensors.te \
 	surfaceflinger.te \
 	system.te \
-	tee.te \
-	thermald.te \
 	ueventd.te \
-	wpa_supplicant.te
+	wpa.te \
+	wpa_socket.te
