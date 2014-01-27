@@ -98,6 +98,9 @@ PRODUCT_PACKAGES += \
     e2fsck \
     setup_fs
 
+# QRNGD
+PRODUCT_PACKAGES += qrngd
+
 # Thermal profiles
 PRODUCT_PACKAGES += \
     thermald-8064ab.conf \
