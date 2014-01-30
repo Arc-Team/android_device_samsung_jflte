@@ -434,6 +434,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.dun.override=0 \
     ro.cwm.enable_key_repeat=true \
     ro.cwm.repeatable_keys=114,115 \
     wifi.interface=wlan0 \
