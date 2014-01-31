@@ -483,6 +483,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_short_ons_2="" \
     persist.rild.nitz_short_ons_3="" \
     ro.telephony.ril.v3=newDriverCall \
+    dalvik.vm.dexopt-data-only=0 \
     ro.vendor.extension_library=/system/lib/libqc-opt.so \
     debug.sf.hw=1 \
     debug.egl.hw=1 \
