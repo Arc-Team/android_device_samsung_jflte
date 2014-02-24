@@ -1,16 +1,12 @@
-# system.prop for SGH-M919
-#
 
-# cannot take spaces
+# jflte
 rild.libargs=-d /dev/smd0
-
-telephony.lteOnGsmDevice=1
-ro.telephony.default_network=9
+persist.radio.mode_pref_nv10=1
 
 # Hardware info
-ro.device.chipset=Qualcomm APQ8064T Snapdragon 600
+ro.device.chipset=Qualcomm Snapdragon 600
 ro.device.cpu=ARMv7 Quad-Core 1.9 GHz Krait 300
 ro.device.gpu=Adreno 320
 ro.device.rear_cam=13 MP (4128x3096)
 ro.device.front_cam=2 MP (1280x960)
-ro.device.screen_res=5" 1600x1200 pixels (~441 ppi)
+ro.device.screen_res=5" 1920x1080 pixels (~441 ppi)
