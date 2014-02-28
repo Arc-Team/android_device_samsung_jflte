@@ -393,9 +393,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/lib/libqmi_encdec.so:system/lib/libqmi_encdec.so \
     device/samsung/jflte/prebuilt/lib/libqmiservices.so:system/lib/libqmiservices.so \
     device/samsung/jflte/prebuilt/lib/libreference-ril.so:system/lib/libreference-ril.so \
-    device/samsung/jflte/prebuilt/lib/libril-qc-qmi-1.so:system/lib/libril-qc-qmi-1.so \
     device/samsung/jflte/prebuilt/lib/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \
-    device/samsung/jflte/prebuilt/lib/libril.so:system/lib/libril.so \
     device/samsung/jflte/prebuilt/lib/libsam.so:system/lib/libsam.so \
     device/samsung/jflte/prebuilt/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
     device/samsung/jflte/prebuilt/lib/libsecril-client.so:system/lib/libsecril-client.so \
