@@ -1,7 +1,7 @@
 # Vendor
 BOARD_VENDOR := samsung
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/jflte/include
-PRODUCT_PACKAGE_OVERLAYS += device/samsung/jflte/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/jflte/overlay
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
