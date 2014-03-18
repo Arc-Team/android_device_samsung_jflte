@@ -141,7 +141,7 @@ BOARD_HAVE_SAMSUNG_CSDCLIENT := true
 
 # Vendor Init
 TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_msm
+TARGET_INIT_VENDOR_LIB := libinit_jflte
 TARGET_LIBINIT_DEFINES_FILE := device/samsung/jflte/init/init_jflte.c
 
 # Filesystem
