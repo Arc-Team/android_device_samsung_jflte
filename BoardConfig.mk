@@ -113,7 +113,7 @@ BOARD_NFC_HAL_SUFFIX := msm8960
 TARGET_USES_CM_POWERHAL := true
 
 # Hardware tunables
-BOARD_HARDWARE_CLASS := hardware/samsung/cmhw
+BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
 
 # HAL
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
