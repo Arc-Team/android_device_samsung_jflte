@@ -55,6 +55,9 @@ TARGET_KERNEL_VARIANT_CONFIG := KT_jf_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := jfselinux_defconfig
 TARGET_KERNEL_CONFIG := jf_eur_defconfig
 
+# linaro
+#TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.7-12.10/bin/arm-linux-gnueabihf
+
 # Kernel time optimization
 #KERNEL_HAS_GETTIMEOFDAY_HELPER := true
 
