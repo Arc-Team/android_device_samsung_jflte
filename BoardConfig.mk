@@ -206,4 +206,4 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/jflte/releasetools
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := GT-I9505,GT-I9505G,i9505,i9505g,jflte,jflteatt,jfltecan,jfltecri,jfltespr,jfltetmo,jflteusc,jfltevzw,jfltexx,jfltezm,jgedlte
+TARGET_OTA_ASSERT_DEVICE := GT-I9505,GT-I9505G,i9505,i9505g,jflte,jflteatt,jfltecan,jfltecri,jfltecsp,jfltespr,jfltetmo,jflteusc,jfltevzw,jfltexx,jfltezm,jgedlte
