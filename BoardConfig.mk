@@ -109,6 +109,9 @@ TARGET_USES_ION := true
 BOARD_HAVE_NFC := true
 BOARD_NFC_HAL_SUFFIX := msm8960
 
+# Use CM PowerHAL by default
+TARGET_POWERHAL_VARIANT := cm
+
 # Hardware tunables
 BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
 
