@@ -2,6 +2,8 @@
 # jflte
 rild.libargs=-d /dev/smd0
 persist.radio.mode_pref_nv10=1
+ro.telephony.default_network=10
+telephony.lteOnCdmaDevice=1
 
 # Hardware info
 ro.device.chipset=Qualcomm Snapdragon 600
