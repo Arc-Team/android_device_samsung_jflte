@@ -131,28 +131,28 @@ PRODUCT_PACKAGES += \
 
 # Thermal profiles
 ifneq ($(TARGET_BOARD_PLATFORM),msm8974)
-    PRODUCT_PACKAGES += \
-        thermald-8064ab.conf \
-        thermald-8064.conf \
-        thermald-8930.conf \
-        thermald-8930ab.conf \
-        thermald-8960.conf \
-        thermald-8260a.conf \
-        thermald-8960ab.conf \
-        thermal-engine-8064ab.conf \
-        init.qcom.thermal_conf.sh
+PRODUCT_PACKAGES += \
+    thermald-8064ab.conf \
+    thermald-8064.conf \
+    thermald-8930.conf \
+    thermald-8930ab.conf \
+    thermald-8960.conf \
+    thermald-8260a.conf \
+    thermald-8960ab.conf \
+    thermal-engine-8064ab.conf \
+    init.qcom.thermal_conf.sh
 endif
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    device/samsung/jflte/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
-    device/samsung/jflte/recovery/postrecoveryboot.sh:recovery/system/bin/postrecoveryboot.sh
+    device/samsung/jflte/prebuilt/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
+    device/samsung/jflte/prebuilt/recovery/postrecoveryboot.sh:recovery/system/bin/postrecoveryboot.sh
 
 # Media config
 ifeq ($(TARGET_BOARD_PLATFORM),msm8974)
-    PRODUCT_COPY_FILES += device/samsung/jflte/prebuilt/etc/media_codes_8974.xml:system/etc/media_codecs.xml
+PRODUCT_COPY_FILES += device/samsung/jflte/prebuilt/etc/media_codes_8974.xml:system/etc/media_codecs.xml
 else
-    PRODUCT_COPY_FILES += device/samsung/jflte/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml
+PRODUCT_COPY_FILES += device/samsung/jflte/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml
 endif
 
 # Media Profile
@@ -453,19 +453,9 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/usr/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
     device/samsung/jflte/prebuilt/usr/keylayout/ue_rf4ce_remote.kl:system/usr/keylayout/ue_rf4ce_remote.kl
 
-# Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# We have enough storage space to hold precise GC data
-PRODUCT_TAGS += dalvik.gc.type-precise
-
-# USB interface
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
-
-# Product Properties
+# Device Properties
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp \
     debug.sf.hw=1 \
     debug.egl.hw=1 \
     persist.hwc.mdpcomp.enable=true \
@@ -520,9 +510,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril.v3=newDriverCall \
     dalvik.vm.dexopt-data-only=0
 
-# Setup device specific product configuration
-PRODUCT_DEVICE := jflte
-PRODUCT_NAME := jflte
-PRODUCT_BRAND := samsung
-PRODUCT_MODEL := Galaxy S4 LTE
-PRODUCT_MANUFACTURER := Samsung
+# Device Tags
+PRODUCT_TAGS += dalvik.gc.type-precise
+
+# Device Density
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
