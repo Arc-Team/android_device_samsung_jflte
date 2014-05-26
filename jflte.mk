@@ -72,6 +72,7 @@ PRODUCT_PACKAGES += \
     Torch \
     qrngd \
     gps.msm8960 \
+    media_codecs.xml \
     camera.MSM8960 \
     lights.msm8960 \
     libtime_genoff \
@@ -124,11 +125,7 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
-# MSM8974
-ifeq ($(TARGET_BOARD_PLATFORM),msm8974)
-PRODUCT_COPY_FILES += \
-    device/samsung/jflte/prebuilt/etc/media_codecs_8974.xml:system/etc/media_codecs.xml
-
+# Thermald
 PRODUCT_PACKAGES += \
     thermald-8064ab.conf \
     thermald-8064.conf \
@@ -139,7 +136,6 @@ PRODUCT_PACKAGES += \
     thermald-8960ab.conf \
     thermal-engine-8064ab.conf \
     init.qcom.thermal_conf.sh
-endif
 
 # Permissions
 PRODUCT_COPY_FILES += \

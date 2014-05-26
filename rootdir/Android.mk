@@ -155,6 +155,8 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := init.qcom.thermal_conf.sh
 include $(BUILD_PREBUILT)
 
+ifeq ($(call is-board-platform-in-list,msm8960 msm8660),true)
+
 include $(CLEAR_VARS)
 LOCAL_MODULE       := thermald-8064ab.conf
 LOCAL_MODULE_TAGS  := optional eng
@@ -231,3 +233,5 @@ LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := thermal-engine-8960.conf
 include $(BUILD_PREBUILT)
+
+endif
