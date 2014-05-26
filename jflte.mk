@@ -4,8 +4,6 @@ $(call inherit-product, build/target/product/full_base_telephony.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/jflte/overlay
-
 # Audio
 PRODUCT_PACKAGES += \
     audio_policy.msm8960 \
@@ -15,10 +13,6 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     libaudio-resampler
 
-# Camera Wrapper
-PRODUCT_PACKAGES += \
-    camera.MSM8960
-
 # Graphics
 PRODUCT_PACKAGES += \
     libgenlock \
@@ -26,7 +20,7 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libqdutils
 
-# OMX
+# Omx
 PRODUCT_PACKAGES += \
     libdivxdrmdecrypt \
     libmm-omxcore \
@@ -60,10 +54,10 @@ PRODUCT_PACKAGES += \
     init.qcom.mdm_links.sh \
     init.qcom.modem_links.sh \
     init.qcom.usb.sh \
-    lpm.rc \
     init.qcom.lpm_boot.sh \
     init.recovery.qcom.rc \
-    init.qcom.ril.sh
+    init.qcom.ril.sh \
+    lpm.rc
 
 # HAL
 PRODUCT_PACKAGES += \
@@ -75,16 +69,21 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
-    gps.msm8960 \
-    qrngd \
-    lights.msm8960 \
     Torch \
+    qrngd \
+    gps.msm8960 \
+    camera.MSM8960 \
+    lights.msm8960 \
+    libtime_genoff \
+    consumerir.msm8960 \
+    com.android.future.usb.accessory
+
+# Live Wallpapers
+PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     VisualizationWallpapers \
-    librs_jni \
-    libtime_genoff \
-    com.android.future.usb.accessory
+    librs_jni
 
 # loki
 PRODUCT_PACKAGES += \
@@ -116,7 +115,7 @@ PRODUCT_PACKAGES += \
     charger \
     charger_res_images
 
-# NFC packages
+# NFC
 PRODUCT_PACKAGES += \
     libnfc-nci \
     libnfc_nci_jni \
@@ -125,12 +124,11 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
-# IR packages
-PRODUCT_PACKAGES += \
-    consumerir.msm8960
+# MSM8974
+ifeq ($(TARGET_BOARD_PLATFORM),msm8974)
+PRODUCT_COPY_FILES += \
+    device/samsung/jflte/prebuilt/etc/media_codecs_8974.xml:system/etc/media_codecs.xml
 
-# Thermal profiles
-ifneq ($(TARGET_BOARD_PLATFORM),msm8974)
 PRODUCT_PACKAGES += \
     thermald-8064ab.conf \
     thermald-8064.conf \
@@ -142,34 +140,6 @@ PRODUCT_PACKAGES += \
     thermal-engine-8064ab.conf \
     init.qcom.thermal_conf.sh
 endif
-
-# Recovery
-PRODUCT_COPY_FILES += \
-    device/samsung/jflte/prebuilt/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
-    device/samsung/jflte/prebuilt/recovery/postrecoveryboot.sh:recovery/system/bin/postrecoveryboot.sh
-
-# Media config
-ifeq ($(TARGET_BOARD_PLATFORM),msm8974)
-PRODUCT_COPY_FILES += device/samsung/jflte/prebuilt/etc/media_codes_8974.xml:system/etc/media_codecs.xml
-else
-PRODUCT_COPY_FILES += device/samsung/jflte/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml
-endif
-
-# Media Profile
-PRODUCT_COPY_FILES += \
-    device/samsung/jflte/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
-
-# Audio
-PRODUCT_COPY_FILES += \
-    device/samsung/jflte/prebuilt/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
-    device/samsung/jflte/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf
-
-# GPS/BT/NFC
-PRODUCT_COPY_FILES += \
-    device/samsung/jflte/gps/gps.conf:/system/etc/gps.conf \
-    device/samsung/jflte/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd \
-    device/samsung/jflte/prebuilt/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
-    device/samsung/jflte/prebuilt/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -202,6 +172,28 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+
+# Recovery
+PRODUCT_COPY_FILES += \
+    device/samsung/jflte/rootdir/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
+    device/samsung/jflte/rootdir/postrecoveryboot.sh:recovery/system/bin/postrecoveryboot.sh
+
+# Audio
+PRODUCT_COPY_FILES += \
+    device/samsung/jflte/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf \
+    device/samsung/jflte/prebuilt/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3
+
+# Media
+PRODUCT_COPY_FILES += \
+    device/samsung/jflte/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
+    device/samsung/jflte/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
+
+# GPS/BT/NFC
+PRODUCT_COPY_FILES += \
+    device/samsung/jflte/prebuilt/etc/gps.conf:/system/etc/gps.conf \
+    device/samsung/jflte/prebuilt/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
+    device/samsung/jflte/prebuilt/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    device/samsung/jflte/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
 
 # Binary
 PRODUCT_COPY_FILES += \
@@ -254,7 +246,14 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/lib/libmmcamera_interface2.so:system/lib/libmmcamera_interface2.so \
     device/samsung/jflte/prebuilt/lib/libmmcamera_plugin.so:system/lib/libmmcamera_plugin.so \
     device/samsung/jflte/prebuilt/lib/libmmcamera_statsproc31.so:system/lib/libmmcamera_statsproc31.so \
-    device/samsung/jflte/prebuilt/lib/libmmcamera_wavelet_lib.so:system/lib/libmmcamera_wavelet_lib.so
+    device/samsung/jflte/prebuilt/lib/libmmcamera_wavelet_lib.so:system/lib/libmmcamera_wavelet_lib.so \
+    device/samsung/jflte/prebuilt/lib/libgemini.so:system/lib/libgemini.so \
+    device/samsung/jflte/prebuilt/lib/libimage-jpeg-enc-omx-comp.so:system/lib/libimage-jpeg-enc-omx-comp.so \
+    device/samsung/jflte/prebuilt/lib/libimage-omx-common.so:system/lib/libimage-omx-common.so \
+    device/samsung/jflte/prebuilt/lib/libmmjpeg.so:system/lib/libmmjpeg.so \
+    device/samsung/jflte/prebuilt/lib/libmmjpeg_interface.so:system/lib/libmmjpeg_interface.so \
+    device/samsung/jflte/prebuilt/lib/liboemcamera.so:system/lib/liboemcamera.so
+
 
 # Firmware
 PRODUCT_COPY_FILES += \
@@ -270,8 +269,6 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_COPY_FILES += \
-    device/samsung/jflte/prebuilt/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    device/samsung/jflte/prebuilt/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     device/samsung/jflte/prebuilt/etc/wifi/bcmdhd_apsta.bin:system/etc/wifi/bcmdhd_apsta.bin \
     device/samsung/jflte/prebuilt/etc/wifi/bcmdhd_apsta.bin_a0:system/etc/wifi/bcmdhd_apsta.bin_a0 \
     device/samsung/jflte/prebuilt/etc/wifi/bcmdhd_mfg.bin:system/etc/wifi/bcmdhd_mfg.bin \
@@ -297,7 +294,9 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/etc/wifi/nvram_net.txt_semco3rd:system/etc/wifi/nvram_net.txt_semco3rd \
     device/samsung/jflte/prebuilt/etc/wifi/nvram_net.txt_semco3rd_a0:system/etc/wifi/nvram_net.txt_semco3rd_a0 \
     device/samsung/jflte/prebuilt/etc/wifi/nvram_net.txt_semcosh:system/etc/wifi/nvram_net.txt_semcosh \
-    device/samsung/jflte/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+    device/samsung/jflte/prebuilt/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    device/samsung/jflte/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    device/samsung/jflte/prebuilt/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 # Hardware
 PRODUCT_COPY_FILES += \
@@ -345,7 +344,6 @@ PRODUCT_COPY_FILES += \
 
 # Misc
 PRODUCT_COPY_FILES += \
-    device/samsung/jflte/prebuilt/lib/libCB.so:system/lib/libCB.so \
     device/samsung/jflte/prebuilt/lib/libExtendedExtractor.so:system/lib/libExtendedExtractor.so \
     device/samsung/jflte/prebuilt/lib/libQSEEComAPI.so:system/lib/libQSEEComAPI.so \
     device/samsung/jflte/prebuilt/lib/libWVStreamControlAPI_L1.so:system/lib/libWVStreamControlAPI_L1.so \
@@ -364,23 +362,17 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/lib/libdsi_netctrl.so:system/lib/libdsi_netctrl.so \
     device/samsung/jflte/prebuilt/lib/libdsutils.so:system/lib/libdsutils.so \
     device/samsung/jflte/prebuilt/lib/libfactoryutil.so:system/lib/libfactoryutil.so \
-    device/samsung/jflte/prebuilt/lib/libgemini.so:system/lib/libgemini.so \
     device/samsung/jflte/prebuilt/lib/libgeofence.so:system/lib/libgeofence.so \
     device/samsung/jflte/prebuilt/lib/libhdcp2.so:system/lib/libhdcp2.so \
     device/samsung/jflte/prebuilt/lib/libidl.so:system/lib/libidl.so \
-    device/samsung/jflte/prebuilt/lib/libimage-jpeg-enc-omx-comp.so:system/lib/libimage-jpeg-enc-omx-comp.so \
-    device/samsung/jflte/prebuilt/lib/libimage-omx-common.so:system/lib/libimage-omx-common.so \
     device/samsung/jflte/prebuilt/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
     device/samsung/jflte/prebuilt/lib/libmercury.so:system/lib/libmercury.so \
     device/samsung/jflte/prebuilt/lib/libmm-color-convertor.so:system/lib/libmm-color-convertor.so \
-    device/samsung/jflte/prebuilt/lib/libmmjpeg.so:system/lib/libmmjpeg.so \
-    device/samsung/jflte/prebuilt/lib/libmmjpeg_interface.so:system/lib/libmmjpeg_interface.so \
     device/samsung/jflte/prebuilt/lib/libmmmpod.so:system/lib/libmmmpod.so \
     device/samsung/jflte/prebuilt/lib/libmmosal.so:system/lib/libmmosal.so \
     device/samsung/jflte/prebuilt/lib/libmmparser.so:system/lib/libmmparser.so \
     device/samsung/jflte/prebuilt/lib/libmmstillomx.so:system/lib/libmmstillomx.so \
     device/samsung/jflte/prebuilt/lib/libnetmgr.so:system/lib/libnetmgr.so \
-    device/samsung/jflte/prebuilt/lib/liboemcamera.so:system/lib/liboemcamera.so \
     device/samsung/jflte/prebuilt/lib/libomission_avoidance.so:system/lib/libomission_avoidance.so \
     device/samsung/jflte/prebuilt/lib/libqc-opt.so:system/lib/libqc-opt.so \
     device/samsung/jflte/prebuilt/lib/libqcci_legacy.so:system/lib/libqcci_legacy.so \
@@ -399,13 +391,9 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
     device/samsung/jflte/prebuilt/lib/libsecril-client.so:system/lib/libsecril-client.so \
     device/samsung/jflte/prebuilt/lib/libsensirion_j1.so:system/lib/libsensirion_j1.so \
-    device/samsung/jflte/prebuilt/lib/libtime_genoff.so:obj/lib/libtime_genoff.so \
     device/samsung/jflte/prebuilt/lib/libtime_genoff.so:system/lib/libtime_genoff.so \
     device/samsung/jflte/prebuilt/lib/libvdis.so:system/lib/libvdis.so \
-    device/samsung/jflte/prebuilt/lib/libwvm.so:system/lib/libwvm.so \
-    device/samsung/jflte/prebuilt/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so \
-    device/samsung/jflte/prebuilt/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
-    device/samsung/jflte/prebuilt/vendor/lib/libqc-opt.so:system/vendor/lib/libqc-opt.so
+    device/samsung/jflte/prebuilt/lib/libwvm.so:system/lib/libwvm.so
 
 # Adreno
 PRODUCT_COPY_FILES += \
@@ -414,15 +402,20 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/vendor/lib/egl/libGLESv1_CM_adreno.so:system/vendor/lib/egl/libGLESv1_CM_adreno.so \
     device/samsung/jflte/prebuilt/vendor/lib/egl/libGLESv2S3D_adreno.so:system/vendor/lib/egl/libGLESv2S3D_adreno.so \
     device/samsung/jflte/prebuilt/vendor/lib/egl/libGLESv2_adreno.so:system/vendor/lib/egl/libGLESv2_adreno.so \
+    device/samsung/jflte/prebuilt/vendor/lib/egl/libplayback_adreno.so:system/vendor/lib/egl/libplayback_adreno.so \
     device/samsung/jflte/prebuilt/vendor/lib/egl/libq3dtools_adreno.so:system/vendor/lib/egl/libq3dtools_adreno.so \
     device/samsung/jflte/prebuilt/vendor/lib/libC2D2.so:system/vendor/lib/libC2D2.so \
+    device/samsung/jflte/prebuilt/vendor/lib/libCB.so:system/vendor/lib/libCB.so \
     device/samsung/jflte/prebuilt/vendor/lib/libOpenCL.so:system/vendor/lib/libOpenCL.so \
     device/samsung/jflte/prebuilt/vendor/lib/libOpenVG.so:system/vendor/lib/libOpenVG.so \
+    device/samsung/jflte/prebuilt/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so \
+    device/samsung/jflte/prebuilt/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
     device/samsung/jflte/prebuilt/vendor/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
     device/samsung/jflte/prebuilt/vendor/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
     device/samsung/jflte/prebuilt/vendor/lib/libc2d30.so:system/vendor/lib/libc2d30.so \
     device/samsung/jflte/prebuilt/vendor/lib/libgsl.so:system/vendor/lib/libgsl.so \
-    device/samsung/jflte/prebuilt/vendor/lib/libllvm-a3xx.so:system/vendor/lib/libllvm-a3xx.so \
+    device/samsung/jflte/prebuilt/vendor/lib/libllvm-qcom.so:system/vendor/lib/libllvm-qcom.so \
+    device/samsung/jflte/prebuilt/vendor/lib/libqc-opt.so:system/vendor/lib/libqc-opt.so \
     device/samsung/jflte/prebuilt/vendor/lib/librs_adreno.so:system/vendor/lib/librs_adreno.so \
     device/samsung/jflte/prebuilt/vendor/lib/librs_adreno_sha1.so:system/vendor/lib/librs_adreno_sha1.so \
     device/samsung/jflte/prebuilt/vendor/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so \
@@ -456,12 +449,6 @@ PRODUCT_COPY_FILES += \
 # Device Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp \
-    debug.sf.hw=1 \
-    debug.egl.hw=1 \
-    persist.hwc.mdpcomp.enable=true \
-    debug.mdpcomp.logs=0 \
-    ro.telephony.ril_class=SamsungQualcommRIL \
-    ro.telephony.call_ring.multiple=0 \
     ro.vendor.extension_library=/system/lib/libqc-opt.so \
     ro.cwm.enable_key_repeat=true \
     ro.cwm.repeatable_keys=114,115 \
@@ -508,7 +495,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_short_ons_2="" \
     persist.rild.nitz_short_ons_3="" \
     ro.telephony.ril.v3=newDriverCall \
-    dalvik.vm.dexopt-data-only=0
+    dalvik.vm.dexopt-data-only=0 \
+    debug.sf.hw=1 \
+    debug.egl.hw=1 \
+    persist.hwc.mdpcomp.enable=true \
+    debug.mdpcomp.logs=0 \
+    ro.telephony.ril_class=SamsungQualcommRIL \
+    ro.telephony.call_ring.multiple=0
 
 # Device Tags
 PRODUCT_TAGS += dalvik.gc.type-precise

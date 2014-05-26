@@ -23,4 +23,4 @@ This repository contains:
 And also need to compile
 
 
-1 - https://github.com/Arc-Team/android_kernel_samsung_jfltetmo/tree/cm-11.0
+1 - https://github.com/Arc-Team/android_kernel_samsung_jflte/tree/cm-11.0
