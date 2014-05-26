@@ -449,8 +449,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cwm.enable_key_repeat=true \
     ro.cwm.repeatable_keys=114,115 \
     wifi.interface=wlan0 \
+    wifi.supplicant_scan_interval=255 \
     ro.chipname=apq8064 \
     ro.ril.hsxpa=1 \
+    ro.debuggable=1 \
+    persist.sys.use_16bpp_alpha=1 \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1 \
+    dalvik.vm.dexopt-flags=m=v,o=y \
+    persist.sys.purgeable_assets=1 \
     ro.ril.gprsclass=10 \
     persist.radio.add_power_save=1 \
     persist.radio.snapshot_disabled=1 \
