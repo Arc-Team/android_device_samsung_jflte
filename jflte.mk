@@ -442,6 +442,11 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/usr/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
     device/samsung/jflte/prebuilt/usr/keylayout/ue_rf4ce_remote.kl:system/usr/keylayout/ue_rf4ce_remote.kl
 
+# Device Default Properties
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=3 \
+    ro.adb.secure=3
+
 # Device Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
