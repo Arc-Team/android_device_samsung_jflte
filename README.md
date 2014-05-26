@@ -1,8 +1,5 @@
-android_device_samsung_jflte
-===============================
-
-Device overlay for Galaxy S4 I9505
-
+Samsung Galaxy S4 "I9505"
+=========================
 
 
 This repository contains: 
