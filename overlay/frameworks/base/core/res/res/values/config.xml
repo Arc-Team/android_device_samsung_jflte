@@ -20,7 +20,7 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string-array name="config_locationProviderPackageNames" translatable="false">
         <!-- The Google provider -->
@@ -39,7 +39,7 @@
     </string-array>
 
     <string name="config_mms_user_agent">CyanogenMod</string>
-    <string name="config_mms_user_agent_profile_url">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
+    <string name="config_mms_user_agent_profile_url">http://gsm.lge.com/html/gsm/Nexus5-M3.xml</string>
 
     <!-- Our amoled doesn't animate well. needed for crt effect -->
     <bool name="config_animateScreenLights">false</bool>
@@ -198,7 +198,7 @@
     <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
     <bool name="config_multiColorBatteryLed">true</bool>
 
-<!-- Vibrator pattern for feedback about a long screen/key press -->
+    <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
         <item>1</item>
