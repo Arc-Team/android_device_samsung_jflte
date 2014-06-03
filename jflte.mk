@@ -449,6 +449,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Device Properties
 PRODUCT_PROPERTY_OVERRIDES += \
+    qcom.hw.aac.encoder=true \
+    af.resampler.quality=255 \
+    ro.config.vc_call_vol_steps=7 \
+    ro.ksm.default=1 \
     com.qc.hardware=true \
     dalvik.vm.dexopt-data-only=0 \
     debug.egl.hw=1 \
