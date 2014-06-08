@@ -19,27 +19,7 @@
 
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
-
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
-    <string-array name="config_locationProviderPackageNames" translatable="false">
-        <!-- The Google provider -->
-        <item>com.google.android.gms</item>
-        <!-- The standard AOSP fused location provider -->
-        <item>com.android.location.fused</item>
-    </string-array>
-
-    <bool name="config_cellBroadcastAppLinks">true</bool>
-
-    <!-- Disable stock OTA components if installed -->
-    <string-array name="config_disabledComponents" translatable="false">
-        <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateActivity</item>
-        <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateService</item>
-        <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateService$Receiver</item>
-    </string-array>
-
-    <string name="config_mms_user_agent">CyanogenMod</string>
-    <string name="config_mms_user_agent_profile_url">http://gsm.lge.com/html/gsm/Nexus5-M3.xml</string>
+<resources>
 
     <!-- Our amoled doesn't animate well. needed for crt effect -->
     <bool name="config_animateScreenLights">false</bool>
