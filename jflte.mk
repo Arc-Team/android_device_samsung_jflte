@@ -74,7 +74,6 @@ PRODUCT_PACKAGES += \
     gps.msm8960 \
     media_codecs.xml \
     camera.MSM8960 \
-    keystore.msm8960 \
     lights.msm8960 \
     libtime_genoff \
     consumerir.msm8960 \
