@@ -15,12 +15,16 @@ PRODUCT_PACKAGES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
+    copybit.msm8960 \
+    gralloc.msm8960 \
+    hwcomposer.msm8960 \
     libgenlock \
     libmemalloc \
     liboverlay \
-    libqdutils
+    libqdutils \
+    memtrack.msm8960
 
-# Omx
+# OMX
 PRODUCT_PACKAGES += \
     libdivxdrmdecrypt \
     libmm-omxcore \
@@ -36,13 +40,52 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libdashplayer
 
+# MSM8960
+PRODUCT_PACKAGES += \
+    camera.msm8960 \
+    gps.msm8960 \
+    power.msm8960 \
+    lights.msm8960 \
+    consumerir.msm8960
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.carrier.rc \
+    init.crda.sh \
+    init.qcom.rc \
+    init.qcom.usb.rc \
+    init.target.rc \
+    ueventd.qcom.rc
+
+# NFC packages
+PRODUCT_PACKAGES += \
+    Tag \
+    NfcNci \
+    libnfc-nci \
+    libnfc_nci_jni \
+    nfc_nci.msm8960 \
+    com.android.nfc_extras
+
 # Filesystem
 PRODUCT_PACKAGES += \
     make_ext4fs \
     e2fsck \
     setup_fs
 
-# Init scripts
+# Thermal
+PRODUCT_PACKAGES += \
+    thermald-8064ab.conf \
+    thermald-8064.conf \
+    thermald-8930.conf \
+    thermald-8930ab.conf \
+    thermald-8960.conf \
+    thermald-8260a.conf \
+    thermald-8960ab.conf \
+    thermal-engine-8064ab.conf \
+    init.qcom.thermal_conf.sh
+
+# Scripts
 PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.efs.sync.sh \
@@ -59,50 +102,6 @@ PRODUCT_PACKAGES += \
     init.qcom.ril.sh \
     lpm.rc
 
-# HAL
-PRODUCT_PACKAGES += \
-    copybit.msm8960 \
-    gralloc.msm8960 \
-    hwcomposer.msm8960 \
-    power.msm8960 \
-    memtrack.msm8960
-
-# Misc
-PRODUCT_PACKAGES += \
-    Torch \
-    qrngd \
-    gps.msm8960 \
-    media_codecs.xml \
-    camera.MSM8960 \
-    lights.msm8960 \
-    libtime_genoff \
-    consumerir.msm8960 \
-    com.android.future.usb.accessory
-
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    VisualizationWallpapers \
-    librs_jni
-
-# loki
-PRODUCT_PACKAGES += \
-    loki_patch \
-    loki_flash \
-    loki.sh \
-    loki_bootloaders
-
-# Ramdisk
-PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.carrier.rc \
-    init.crda.sh \
-    init.qcom.rc \
-    init.qcom.usb.rc \
-    init.target.rc \
-    ueventd.qcom.rc
-
 # Wifi
 PRODUCT_PACKAGES += \
     libnetcmdiface \
@@ -111,31 +110,31 @@ PRODUCT_PACKAGES += \
     regulatory.bin \
     linville.key.pub.pem
 
+# LiveWallpapers
+PRODUCT_PACKAGES += \
+    LiveWallpapers \
+    LiveWallpapersPicker \
+    VisualizationWallpapers \
+    librs_jni
+
+# Loki
+PRODUCT_PACKAGES += \
+    loki_patch \
+    loki_flash \
+    loki.sh \
+    loki_bootloaders
+
 # Charger
 PRODUCT_PACKAGES += \
     charger \
     charger_res_images
 
-# NFC
+# Misc
 PRODUCT_PACKAGES += \
-    libnfc-nci \
-    libnfc_nci_jni \
-    nfc_nci.msm8960 \
-    NfcNci \
-    Tag \
-    com.android.nfc_extras
-
-# Thermald
-PRODUCT_PACKAGES += \
-    thermald-8064ab.conf \
-    thermald-8064.conf \
-    thermald-8930.conf \
-    thermald-8930ab.conf \
-    thermald-8960.conf \
-    thermald-8260a.conf \
-    thermald-8960ab.conf \
-    thermal-engine-8064ab.conf \
-    init.qcom.thermal_conf.sh
+    Torch \
+    qrngd \
+    libtime_genoff \
+    com.android.future.usb.accessory
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -149,12 +148,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
-    frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
-    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:system/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:system/etc/permissions/android.hardware.sensor.stepdetector.xml \
@@ -176,20 +171,19 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/samsung/jflte/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf \
-    device/samsung/jflte/prebuilt/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3
+    device/samsung/jflte/prebuilt/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
+    device/samsung/jflte/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf
 
 # Media
 PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
     device/samsung/jflte/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
 
-# GPS/BT/NFC
+# GPS/NFC
 PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/etc/gps.conf:/system/etc/gps.conf \
-    device/samsung/jflte/prebuilt/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
     device/samsung/jflte/prebuilt/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    device/samsung/jflte/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
+    device/samsung/jflte/prebuilt/etc/nfcee_access.xml:system/etc/nfcee_access.xml
 
 # Binary
 PRODUCT_COPY_FILES += \
@@ -243,13 +237,12 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/lib/libmmcamera_plugin.so:system/lib/libmmcamera_plugin.so \
     device/samsung/jflte/prebuilt/lib/libmmcamera_statsproc31.so:system/lib/libmmcamera_statsproc31.so \
     device/samsung/jflte/prebuilt/lib/libmmcamera_wavelet_lib.so:system/lib/libmmcamera_wavelet_lib.so \
+    device/samsung/jflte/prebuilt/lib/libmmjpeg.so:system/lib/libmmjpeg.so \
+    device/samsung/jflte/prebuilt/lib/libmmjpeg_interface.so:system/lib/libmmjpeg_interface.so \
     device/samsung/jflte/prebuilt/lib/libgemini.so:system/lib/libgemini.so \
     device/samsung/jflte/prebuilt/lib/libimage-jpeg-enc-omx-comp.so:system/lib/libimage-jpeg-enc-omx-comp.so \
     device/samsung/jflte/prebuilt/lib/libimage-omx-common.so:system/lib/libimage-omx-common.so \
-    device/samsung/jflte/prebuilt/lib/libmmjpeg.so:system/lib/libmmjpeg.so \
-    device/samsung/jflte/prebuilt/lib/libmmjpeg_interface.so:system/lib/libmmjpeg_interface.so \
     device/samsung/jflte/prebuilt/lib/liboemcamera.so:system/lib/liboemcamera.so
-
 
 # Firmware
 PRODUCT_COPY_FILES += \
@@ -261,7 +254,8 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/vendor/firmware/bcm4335.hcd:system/vendor/firmware/bcm4335.hcd \
     device/samsung/jflte/prebuilt/vendor/firmware/bcm4335_A0.hcd:system/vendor/firmware/bcm4335_A0.hcd \
     device/samsung/jflte/prebuilt/vendor/firmware/bcm4335_murata.hcd:system/vendor/firmware/bcm4335_murata.hcd \
-    device/samsung/jflte/prebuilt/vendor/firmware/bcm4335_semco.hcd:system/vendor/firmware/bcm4335_semco.hcd
+    device/samsung/jflte/prebuilt/vendor/firmware/bcm4335_semco.hcd:system/vendor/firmware/bcm4335_semco.hcd \
+    device/samsung/jflte/prebuilt/vendor/firmware/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -442,74 +436,66 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/usr/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
     device/samsung/jflte/prebuilt/usr/keylayout/ue_rf4ce_remote.kl:system/usr/keylayout/ue_rf4ce_remote.kl
 
-# Device Default Properties
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=3 \
-    ro.adb.secure=3
-
 # Device Properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    qcom.hw.aac.encoder=true \
-    af.resampler.quality=255 \
-    ro.config.vc_call_vol_steps=7 \
-    ro.ksm.default=1 \
-    com.qc.hardware=true \
-    dalvik.vm.dexopt-data-only=0 \
-    debug.egl.hw=1 \
-    debug.mdpcomp.logs=0 \
-    debug.sf.hw=1 \
-    keyguard.no_require_sim=true \
-    lpa.decode=true \
-    media.aac_51_output_enabled=true \
-    mm.enable.smoothstreaming=true \
-    persist.audio.fluence.mode=endfire \
-    persist.audio.handset.mic=digital \
-    persist.audio.speaker.location=high \
-    persist.audio.vr.enable=false \
-    persist.data.ds_fmc_app.mode=0 \
-    persist.data_netmgrd_nint=16 \
-    persist.fuse_sdcard=true \
-    persist.hwc.mdpcomp.enable=true \
-    persist.ims.regmanager.mode=0 \
-    persist.omh.enabled=1 \
+    persist.sys.usb.config=mtp \
+    ro.vendor.extension_library=/system/lib/libqc-opt.so \
+    ro.cwm.enable_key_repeat=true \
+    ro.cwm.repeatable_keys=114,115 \
+    wifi.interface=wlan0 \
+    ro.chipname=apq8064 \
+    ro.ril.hsxpa=1 \
+    ro.ril.gprsclass=10 \
     persist.radio.add_power_save=1 \
-    persist.radio.apm_sim_not_pwdn=1 \
-    persist.radio.fill_eons=1 \
     persist.radio.snapshot_disabled=1 \
     persist.radio.use_se_table_only=1 \
+    persist.radio.fill_eons=1 \
+    com.qc.hardware=true \
+    persist.radio.apm_sim_not_pwdn=1 \
+    ro.telephony.call_ring.multiple=0 \
+    ro.sf.lcd_density=480 \
+    ro.ril.transmitpower=true \
+    ro.opengles.version=196608 \
+    persist.audio.fluence.mode=endfire \
+    persist.audio.vr.enable=false \
+    persist.audio.handset.mic=digital \
+    persist.audio.speaker.location=high \
+    ro.qc.sdk.audio.fluencetype=fluence \
+    persist.timed.enable=true \
+    persist.fuse_sdcard=true \
+    ro.emmc.sdcard.partition=17 \
+    ro.use_data_netmgrd=true \
+    persist.data.ds_fmc_app.mode=0 \
+    persist.ims.regmanager.mode=0 \
+    ro.config.ehrpd=true \
+    persist.omh.enabled=1 \
+    persist.data_netmgrd_nint=16 \
+    lpa.decode=true \
+    rild.libpath=/system/lib/libril-qc-qmi-1.so \
+    keyguard.no_require_sim=true \
+    media.aac_51_output_enabled=true \
+    mm.enable.smoothstreaming=true \
+    persist.rild.nitz_plmn="" \
     persist.rild.nitz_long_ons_0="" \
     persist.rild.nitz_long_ons_1="" \
     persist.rild.nitz_long_ons_2="" \
     persist.rild.nitz_long_ons_3="" \
-    persist.rild.nitz_plmn="" \
     persist.rild.nitz_short_ons_0="" \
     persist.rild.nitz_short_ons_1="" \
     persist.rild.nitz_short_ons_2="" \
     persist.rild.nitz_short_ons_3="" \
-    persist.service.adb.enable=1 \
-    persist.service.debuggable=1 \
-    persist.sys.purgeable_assets=1 \
-    persist.sys.usb.config=mtp \
-    persist.sys.use_16bpp_alpha=1 \
-    persist.timed.enable=true \
-    rild.libpath=/system/lib/libril-qc-qmi-1.so \
-    ro.chipname=apq8064 \
-    ro.config.ehrpd=true \
-    ro.cwm.enable_key_repeat=true \
-    ro.cwm.repeatable_keys=114,115 \
-    ro.debuggable=1 \
-    ro.emmc.sdcard.partition=17 \
-    ro.opengles.version=196608 \
-    ro.qc.sdk.audio.fluencetype=fluence \
-    ro.ril.transmitpower=true \
-    ro.sf.lcd_density=480 \
-    ro.telephony.call_ring.multiple=0 \
     ro.telephony.ril.v3=newDriverCall \
+    dalvik.vm.dexopt-data-only=0 \
+    qcom.hw.aac.encoder=true \
+    af.resampler.quality=255 \
+    ro.config.vc_call_vol_steps=7 \
+    ro.ksm.default=1 \
+    debug.sf.hw=1 \
+    debug.egl.hw=1 \
+    persist.hwc.mdpcomp.enable=true \
+    debug.mdpcomp.logs=0 \
     ro.telephony.ril_class=SamsungQualcommRIL \
-    ro.use_data_netmgrd=true \
-    ro.vendor.extension_library=/system/lib/libqc-opt.so \
-    wifi.interface=wlan0 \
-    wifi.supplicant_scan_interval=255
+    ro.telephony.call_ring.multiple=0
 
 # Device Tags
 PRODUCT_TAGS += dalvik.gc.type-precise
