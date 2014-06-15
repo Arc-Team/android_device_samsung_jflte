@@ -411,22 +411,10 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/vendor/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so \
     device/samsung/jflte/prebuilt/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so
 
-# Keylayouts and Keychars
+# Keylayouts
 PRODUCT_COPY_FILES += \
-    device/samsung/jflte/prebuilt/usr/keychars/Generic.kcm:system/usr/keychars/Generic.kcm \
-    device/samsung/jflte/prebuilt/usr/keychars/Virtual.kcm:system/usr/keychars/Virtual.kcm \
-    device/samsung/jflte/prebuilt/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/samsung/jflte/prebuilt/usr/keylayout/Button_Jack.kl:system/usr/keylayout/Button_Jack.kl \
-    device/samsung/jflte/prebuilt/usr/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
-    device/samsung/jflte/prebuilt/usr/keylayout/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_028e.kl \
-    device/samsung/jflte/prebuilt/usr/keylayout/Vendor_046d_Product_c216.kl:system/usr/keylayout/Vendor_046d_Product_c216.kl \
-    device/samsung/jflte/prebuilt/usr/keylayout/Vendor_046d_Product_c294.kl:system/usr/keylayout/Vendor_046d_Product_c294.kl \
-    device/samsung/jflte/prebuilt/usr/keylayout/Vendor_046d_Product_c299.kl:system/usr/keylayout/Vendor_046d_Product_c299.kl \
-    device/samsung/jflte/prebuilt/usr/keylayout/Vendor_046d_Product_c532.kl:system/usr/keylayout/Vendor_046d_Product_c532.kl \
     device/samsung/jflte/prebuilt/usr/keylayout/Vendor_04e8_Product_7021.kl:system/usr/keylayout/Vendor_04e8_Product_7021.kl \
-    device/samsung/jflte/prebuilt/usr/keylayout/Vendor_054c_Product_0268.kl:system/usr/keylayout/Vendor_054c_Product_0268.kl \
-    device/samsung/jflte/prebuilt/usr/keylayout/Vendor_05ac_Product_0239.kl:system/usr/keylayout/Vendor_05ac_Product_0239.kl \
-    device/samsung/jflte/prebuilt/usr/keylayout/Vendor_22b8_Product_093d.kl:system/usr/keylayout/Vendor_22b8_Product_093d.kl \
     device/samsung/jflte/prebuilt/usr/keylayout/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
     device/samsung/jflte/prebuilt/usr/keylayout/cyttsp-i2c.kl:system/usr/keylayout/cyttsp-i2c.kl \
     device/samsung/jflte/prebuilt/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
