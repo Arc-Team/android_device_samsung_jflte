@@ -1,8 +1,4 @@
 
-# jflte
-rild.libargs=-d /dev/smd0
-persist.radio.mode_pref_nv10=1
-
 # Tweaks
 mot.proximity.delay=25
 pm.sleep_mode=1
@@ -41,6 +37,7 @@ net.tcp.buffersize.gprs=6144,87380,1048576,6144,87380,524288
 net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,87380,1048576
 net.tcp.buffersize.hspa=6144,87380,524288,6144,16384,262144
 net.tcp.buffersize.umts=6144,87380,1048576,6144,87380,524288
+net.tcp.buffersize.lte=524288,1048576,2097152,524288,1048576,2097152
 net.tcp.buffersize.wifi=524288,1048576,2097152,524288,1048576,2097152
 
 # Hardware info
