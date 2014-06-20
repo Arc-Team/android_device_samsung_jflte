@@ -119,8 +119,7 @@ PRODUCT_PACKAGES += \
 
 # Loki
 PRODUCT_PACKAGES += \
-    loki_patch \
-    loki_flash \
+    loki_tool \
     loki.sh \
     loki_bootloaders
 
