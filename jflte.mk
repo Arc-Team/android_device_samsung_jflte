@@ -121,7 +121,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     loki_tool \
     loki.sh \
-    loki_bootloaders
+    loki_bootloaders \
+    recovery-transform.sh
 
 # Charger
 PRODUCT_PACKAGES += \
