@@ -33,8 +33,7 @@ ifeq ($(FEATURE_ULP), true)
 LOCAL_CFLAGS += -DFEATURE_ULP
 endif #FEATURE_ULP
 
-LOCAL_C_INCLUDES:= \
-    $(TARGET_OUT_HEADERS)/gps.utils
+LOCAL_C_INCLUDES:= $(TARGET_OUT_HEADERS)/gps.utils
 
 LOCAL_COPY_HEADERS_TO:= libloc_eng/
 LOCAL_COPY_HEADERS:= \
@@ -89,9 +88,7 @@ ifeq ($(FEATURE_ULP), true)
 LOCAL_CFLAGS += -DFEATURE_ULP
 endif #FEATURE_ULP
 
-LOCAL_C_INCLUDES:= \
-    $(TARGET_OUT_HEADERS)/gps.utils \
-    hardware/qcom/gps/loc_api/ulp/inc
+LOCAL_C_INCLUDES:= $(TARGET_OUT_HEADERS)/gps.utils
 
 LOCAL_PRELINK_MODULE := false
 
@@ -122,10 +119,7 @@ LOCAL_CFLAGS += \
 
 LOCAL_CFLAGS += -DFEATURE_IPV6
 
-## Includes
-LOCAL_C_INCLUDES:= \
-    $(TARGET_OUT_HEADERS)/gps.utils \
-    hardware/qcom/gps/loc_api/ulp/inc
+LOCAL_C_INCLUDES:= $(TARGET_OUT_HEADERS)/gps.utils
 
 LOCAL_PRELINK_MODULE := false
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
