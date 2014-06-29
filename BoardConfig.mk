@@ -31,7 +31,7 @@ endif
 # Kernel
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 zcache msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 zcache msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 TARGET_KERNEL_SOURCE := kernel/samsung/jflte
 TARGET_KERNEL_CONFIG := jf_eur_defconfig
@@ -154,7 +154,7 @@ BOARD_BATTERY_DEVICE_NAME := "battery"
 BOARD_CHARGER_RES := device/samsung/jflte/charger
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
 
-# Vendor
+# Vendor Init
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_jflte
 TARGET_LIBINIT_DEFINES_FILE := device/samsung/jflte/init/init_jflte.c
@@ -166,7 +166,7 @@ BOARD_NFC_HAL_SUFFIX := msm8960
 # PowerHAL
 TARGET_POWERHAL_VARIANT := cm
 
-# HAL
+# Healthd-HAL
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
 
 # Liblights

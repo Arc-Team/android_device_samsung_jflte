@@ -58,7 +58,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
-# NFC packages
+# NFC
 PRODUCT_PACKAGES += \
     Tag \
     NfcNci \
@@ -110,7 +110,7 @@ PRODUCT_PACKAGES += \
     regulatory.bin \
     linville.key.pub.pem
 
-# LiveWallpapers
+# Live-Wallpapers
 PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
