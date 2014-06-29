@@ -229,17 +229,23 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/cameradata/RS_M10MO_SS.bin:system/cameradata/RS_M10MO_SS.bin \
     device/samsung/jflte/prebuilt/cameradata/datapattern_420sp.yuv:system/cameradata/datapattern_420sp.yuv \
     device/samsung/jflte/prebuilt/cameradata/datapattern_front_420sp.yuv:system/cameradata/datapattern_front_420sp.yuv \
+    device/samsung/jflte/prebuilt/lib/libadsprpc.so:system/lib/libadsprpc.so \
     device/samsung/jflte/prebuilt/lib/libmmcamera_faceproc.so:system/lib/libmmcamera_faceproc.so \
     device/samsung/jflte/prebuilt/lib/libmmcamera_frameproc.so:system/lib/libmmcamera_frameproc.so \
     device/samsung/jflte/prebuilt/lib/libmmcamera_hdr_lib.so:system/lib/libmmcamera_hdr_lib.so \
+    device/samsung/jflte/prebuilt/lib/libvdis.so:system/lib/libvdis.so \
     device/samsung/jflte/prebuilt/lib/libmmcamera_image_stab.so:system/lib/libmmcamera_image_stab.so \
     device/samsung/jflte/prebuilt/lib/libmmcamera_imx091.so:system/lib/libmmcamera_imx091.so \
+    device/samsung/jflte/prebuilt/lib/libmmstillomx.so:system/lib/libmmstillomx.so \
     device/samsung/jflte/prebuilt/lib/libmmcamera_interface.so:system/lib/libmmcamera_interface.so \
     device/samsung/jflte/prebuilt/lib/libmmcamera_interface2.so:system/lib/libmmcamera_interface2.so \
     device/samsung/jflte/prebuilt/lib/libmmcamera_plugin.so:system/lib/libmmcamera_plugin.so \
     device/samsung/jflte/prebuilt/lib/libmmcamera_statsproc31.so:system/lib/libmmcamera_statsproc31.so \
     device/samsung/jflte/prebuilt/lib/libmmcamera_wavelet_lib.so:system/lib/libmmcamera_wavelet_lib.so \
+    device/samsung/jflte/prebuilt/lib/libmercury.so:system/lib/libmercury.so \
+    device/samsung/jflte/prebuilt/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
     device/samsung/jflte/prebuilt/lib/libmmjpeg.so:system/lib/libmmjpeg.so \
+    device/samsung/jflte/prebuilt/lib/libmmmpod.so:system/lib/libmmmpod.so \
     device/samsung/jflte/prebuilt/lib/libmmjpeg_interface.so:system/lib/libmmjpeg_interface.so \
     device/samsung/jflte/prebuilt/lib/libgemini.so:system/lib/libgemini.so \
     device/samsung/jflte/prebuilt/lib/libimage-jpeg-enc-omx-comp.so:system/lib/libimage-jpeg-enc-omx-comp.so \
@@ -334,40 +340,35 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/lib/libchromatix_s5k6b2yx_vt.so:system/lib/libchromatix_s5k6b2yx_vt.so \
     device/samsung/jflte/prebuilt/lib/libchromatix_s5k6b2yx_vt_hd.so:system/lib/libchromatix_s5k6b2yx_vt_hd.so
 
-# Misc
+# GPS
+PRODUCT_COPY_FILES += \
+    device/samsung/jflte/prebuilt/lib/libgeofence.so:system/lib/libgeofence.so \
+    device/samsung/jflte/prebuilt/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so
+
+# Audio
+PRODUCT_COPY_FILES += \
+    device/samsung/jflte/prebuilt/lib/libacdbloader.so:system/lib/libacdbloader.so \
+    device/samsung/jflte/prebuilt/lib/libaudcal.so:system/lib/libaudcal.so \
+    device/samsung/jflte/prebuilt/lib/libcsd-client.so:system/lib/libcsd-client.so
+
+# MMParser
 PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/lib/libExtendedExtractor.so:system/lib/libExtendedExtractor.so \
-    device/samsung/jflte/prebuilt/lib/libQSEEComAPI.so:system/lib/libQSEEComAPI.so \
-    device/samsung/jflte/prebuilt/lib/libWVStreamControlAPI_L1.so:system/lib/libWVStreamControlAPI_L1.so \
-    device/samsung/jflte/prebuilt/lib/libacdbloader.so:system/lib/libacdbloader.so \
-    device/samsung/jflte/prebuilt/lib/libadreno_utils.so:system/lib/libadreno_utils.so \
-    device/samsung/jflte/prebuilt/lib/libadsprpc.so:system/lib/libadsprpc.so \
+    device/samsung/jflte/prebuilt/lib/libmmosal.so:system/lib/libmmosal.so \
+    device/samsung/jflte/prebuilt/lib/libmmparser.so:system/lib/libmmparser.so \
+    device/samsung/jflte/prebuilt/lib/libdivxdrm.so:system/lib/libdivxdrm.so
+
+# Radio
+PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/lib/libatparser.so:system/lib/libatparser.so \
-    device/samsung/jflte/prebuilt/lib/libaudcal.so:system/lib/libaudcal.so \
     device/samsung/jflte/prebuilt/lib/libcordon.so:system/lib/libcordon.so \
-    device/samsung/jflte/prebuilt/lib/libcsd-client.so:system/lib/libcsd-client.so \
     device/samsung/jflte/prebuilt/lib/libdiag.so:system/lib/libdiag.so \
-    device/samsung/jflte/prebuilt/lib/libdivxdrm.so:system/lib/libdivxdrm.so \
-    device/samsung/jflte/prebuilt/lib/libdrmdecrypt.so:system/lib/libdrmdecrypt.so \
-    device/samsung/jflte/prebuilt/lib/libdrmfs.so:system/lib/libdrmfs.so \
-    device/samsung/jflte/prebuilt/lib/libdrmtime.so:system/lib/libdrmtime.so \
     device/samsung/jflte/prebuilt/lib/libdsi_netctrl.so:system/lib/libdsi_netctrl.so \
     device/samsung/jflte/prebuilt/lib/libdsutils.so:system/lib/libdsutils.so \
     device/samsung/jflte/prebuilt/lib/libfactoryutil.so:system/lib/libfactoryutil.so \
-    device/samsung/jflte/prebuilt/lib/libgeofence.so:system/lib/libgeofence.so \
-    device/samsung/jflte/prebuilt/lib/libhdcp2.so:system/lib/libhdcp2.so \
     device/samsung/jflte/prebuilt/lib/libidl.so:system/lib/libidl.so \
-    device/samsung/jflte/prebuilt/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
-    device/samsung/jflte/prebuilt/lib/libmercury.so:system/lib/libmercury.so \
-    device/samsung/jflte/prebuilt/lib/libmm-color-convertor.so:system/lib/libmm-color-convertor.so \
-    device/samsung/jflte/prebuilt/lib/libmmmpod.so:system/lib/libmmmpod.so \
-    device/samsung/jflte/prebuilt/lib/libmmosal.so:system/lib/libmmosal.so \
-    device/samsung/jflte/prebuilt/lib/libmmparser.so:system/lib/libmmparser.so \
-    device/samsung/jflte/prebuilt/lib/libmmstillomx.so:system/lib/libmmstillomx.so \
     device/samsung/jflte/prebuilt/lib/libnetmgr.so:system/lib/libnetmgr.so \
     device/samsung/jflte/prebuilt/lib/libomission_avoidance.so:system/lib/libomission_avoidance.so \
-    device/samsung/jflte/prebuilt/lib/libqc-opt.so:system/lib/libqc-opt.so \
-    device/samsung/jflte/prebuilt/lib/libqcci_legacy.so:system/lib/libqcci_legacy.so \
     device/samsung/jflte/prebuilt/lib/libqdi.so:system/lib/libqdi.so \
     device/samsung/jflte/prebuilt/lib/libqdp.so:system/lib/libqdp.so \
     device/samsung/jflte/prebuilt/lib/libqmi.so:system/lib/libqmi.so \
@@ -379,13 +380,27 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/lib/libqmiservices.so:system/lib/libqmiservices.so \
     device/samsung/jflte/prebuilt/lib/libreference-ril.so:system/lib/libreference-ril.so \
     device/samsung/jflte/prebuilt/lib/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \
-    device/samsung/jflte/prebuilt/lib/libsam.so:system/lib/libsam.so \
-    device/samsung/jflte/prebuilt/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
-    device/samsung/jflte/prebuilt/lib/libsecril-client.so:system/lib/libsecril-client.so \
-    device/samsung/jflte/prebuilt/lib/libsensirion_j1.so:system/lib/libsensirion_j1.so \
-    device/samsung/jflte/prebuilt/lib/libtime_genoff.so:system/lib/libtime_genoff.so \
-    device/samsung/jflte/prebuilt/lib/libvdis.so:system/lib/libvdis.so \
+    device/samsung/jflte/prebuilt/lib/libsecril-client.so:system/lib/libsecril-client.so
+
+# DRM
+PRODUCT_COPY_FILES += \
+    device/samsung/jflte/prebuilt/lib/libdrmdecrypt.so:system/lib/libdrmdecrypt.so \
+    device/samsung/jflte/prebuilt/lib/libdrmfs.so:system/lib/libdrmfs.so \
+    device/samsung/jflte/prebuilt/lib/libdrmtime.so:system/lib/libdrmtime.so \
+    device/samsung/jflte/prebuilt/lib/libhdcp2.so:system/lib/libhdcp2.so \
+    device/samsung/jflte/prebuilt/lib/libQSEEComAPI.so:system/lib/libQSEEComAPI.so \
+    device/samsung/jflte/prebuilt/lib/libWVStreamControlAPI_L1.so:system/lib/libWVStreamControlAPI_L1.so \
     device/samsung/jflte/prebuilt/lib/libwvm.so:system/lib/libwvm.so
+
+# Misc
+PRODUCT_COPY_FILES += \
+    device/samsung/jflte/prebuilt/lib/libadreno_utils.so:system/lib/libadreno_utils.so \
+    device/samsung/jflte/prebuilt/lib/libmm-color-convertor.so:system/lib/libmm-color-convertor.so \
+    device/samsung/jflte/prebuilt/lib/libqc-opt.so:system/lib/libqc-opt.so \
+    device/samsung/jflte/prebuilt/lib/libqcci_legacy.so:system/lib/libqcci_legacy.so \
+    device/samsung/jflte/prebuilt/lib/libsam.so:system/lib/libsam.so \
+    device/samsung/jflte/prebuilt/lib/libsensirion_j1.so:system/lib/libsensirion_j1.so \
+    device/samsung/jflte/prebuilt/lib/libtime_genoff.so:system/lib/libtime_genoff.so
 
 # Adreno
 PRODUCT_COPY_FILES += \
