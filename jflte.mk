@@ -179,9 +179,10 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
     device/samsung/jflte/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
 
-# GPS/NFC
+# GPS/NFC/HOSTS
 PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/etc/gps.conf:/system/etc/gps.conf \
+    device/samsung/jflte/prebuilt/etc/host:system/etc/host \
     device/samsung/jflte/prebuilt/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     device/samsung/jflte/prebuilt/etc/nfcee_access.xml:system/etc/nfcee_access.xml
 
