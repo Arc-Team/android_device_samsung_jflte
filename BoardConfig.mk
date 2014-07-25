@@ -152,7 +152,9 @@ TW_BRIGHTNESS_PATH := /sys/devices/platform/msm_fb.526593/leds/lcd-backlight/bri
 # Charging
 BOARD_BATTERY_DEVICE_NAME := "battery"
 BOARD_CHARGER_RES := device/samsung/jflte/charger
-BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
+BOARD_CHARGING_MODE_BOOTING_LPM :=
+BOARD_CHARGING_CMDLINE_NAME := "androidboot.bootchg"
+BOARD_CHARGING_CMDLINE_VALUE := "true"
 
 # Vendor Init
 TARGET_UNIFIED_DEVICE := true
