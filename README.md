@@ -9,7 +9,7 @@ This repository contains:
 
 2 - https://github.com/cyanogenmod/android_device_samsung_qcom-common/tree/cm-11.0
 
-3 - https://github.com/cyanogenmod/android_device_samsung_msm8960-common/tree/cm-11.0
+3 - https://github.com/CyanogenMod/android_device_qcom_common/tree/cm-11.0
 
 4 - https://github.com/cyanogenmod/android_hardware_samsung/tree/cm-11.0
 
