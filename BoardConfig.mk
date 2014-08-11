@@ -160,9 +160,6 @@ BOARD_NFC_HAL_SUFFIX := msm8960
 # Power
 TARGET_POWERHAL_VARIANT := jflte
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := jflte
-
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
@@ -203,3 +200,6 @@ BOARD_SEPOLICY_UNION += \
     ueventd.te \
     wpa.te \
     wpa_socket.te
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := GT-I9505,GT-I9505G,i9505,i9505g,jflte,jflteatt,jfltecan,jfltecri,jfltecsp,jflterefreshspr,jfltespr,jfltetmo,jflteusc,jfltevzw,jfltexx,jfltezm,jgedlte
