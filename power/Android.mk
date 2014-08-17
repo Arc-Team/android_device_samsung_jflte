@@ -16,10 +16,6 @@ LOCAL_SHARED_LIBRARIES := liblog libcutils libdl
 LOCAL_SRC_FILES := power.c metadata-parser.c utils.c list.c hint-data.c power-8960.c
 endif
 
-ifeq ($(TARGET_USES_CPU_BOOST_HINT),true)
-    LOCAL_CFLAGS += -DBOOST_HINT
-endif
-
 ifneq ($(TARGET_POWERHAL_SET_INTERACTIVE_EXT),)
 LOCAL_CFLAGS += -DSET_INTERACTIVE_EXT
 LOCAL_SRC_FILES += ../../../../$(TARGET_POWERHAL_SET_INTERACTIVE_EXT)
