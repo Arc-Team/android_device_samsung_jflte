@@ -426,7 +426,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=480 \
     ro.telephony.call_ring.multiple=0 \
     ro.telephony.ril_class=SamsungQualcommRIL \
-    ro.vendor.extension_library=/system/lib/libqc-opt.so \
+    ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=255
 
