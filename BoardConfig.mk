@@ -28,6 +28,7 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 zcache msm_rtb.f
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 TARGET_KERNEL_SOURCE := kernel/samsung/jflte
 TARGET_KERNEL_CONFIG := cyanogen_jf_defconfig
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.9-cortex-a15
 
 # Audio
 BOARD_HAVE_AUDIENCE_ES325_2MIC := true
