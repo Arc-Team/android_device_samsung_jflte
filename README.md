@@ -1,5 +1,5 @@
-Samsung Galaxy S4 "JFLTE (I9505)"
-=================================
+Samsung Galaxy S4 "MSM8960"
+===========================
 
 
 This repository contains: 
