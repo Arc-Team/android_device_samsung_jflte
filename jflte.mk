@@ -142,8 +142,8 @@ PRODUCT_COPY_FILES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    device/samsung/jflte/prebuilt/etc/thermald.conf:system/etc/thermald.conf \
-    device/samsung/jflte/prebuilt/etc/thermal-engine.conf:system/etc/thermal-engine.conf
+    device/samsung/jflte/prebuilt/etc/thermal-engine.conf:system/etc/thermal-engine.conf \
+    device/samsung/jflte/prebuilt/etc/thermald.conf:system/etc/thermald.conf
 
 # GPS/NFC/HOSTS
 PRODUCT_COPY_FILES += \
@@ -245,10 +245,10 @@ PRODUCT_COPY_FILES += \
 
 # DRM
 PRODUCT_COPY_FILES += \
+    device/samsung/jflte/prebuilt/vendor/lib/libQSEEComAPI.so:system/vendor/lib/libQSEEComAPI.so \
     device/samsung/jflte/prebuilt/vendor/lib/libdrmdecrypt.so:system/vendor/lib/libdrmdecrypt.so \
     device/samsung/jflte/prebuilt/vendor/lib/libdrmfs.so:system/vendor/lib/libdrmfs.so \
-    device/samsung/jflte/prebuilt/vendor/lib/libdrmtime.so:system/vendor/lib/libdrmtime.so \
-    device/samsung/jflte/prebuilt/vendor/lib/libQSEEComAPI.so:system/vendor/lib/libQSEEComAPI.so
+    device/samsung/jflte/prebuilt/vendor/lib/libdrmtime.so:system/vendor/lib/libdrmtime.so
 
 # Chromatix
 PRODUCT_COPY_FILES += \
@@ -296,8 +296,8 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/vendor/firmware/bcm2079xB4_pre_firmware.ncd:system/vendor/firmware/bcm2079xB4_pre_firmware.ncd \
     device/samsung/jflte/prebuilt/vendor/firmware/bcm4335.hcd:system/vendor/firmware/bcm4335.hcd \
     device/samsung/jflte/prebuilt/vendor/firmware/bcm4335_murata.hcd:system/vendor/firmware/bcm4335_murata.hcd \
-    device/samsung/jflte/prebuilt/vendor/firmware/bcm4335_semco.hcd:system/vendor/firmware/bcm4335_semco.hcd \
     device/samsung/jflte/prebuilt/vendor/firmware/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd \
+    device/samsung/jflte/prebuilt/vendor/firmware/bcm4335_semco.hcd:system/vendor/firmware/bcm4335_semco.hcd \
     device/samsung/jflte/prebuilt/vendor/firmware/vidc_1080p.fw:system/vendor/firmware/vidc_1080p.fw
 
 # Adreno
@@ -309,18 +309,18 @@ PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/vendor/lib/egl/libGLESv2S3D_adreno.so:system/vendor/lib/egl/libGLESv2S3D_adreno.so \
     device/samsung/jflte/prebuilt/vendor/lib/egl/libGLESv2_adreno.so:system/vendor/lib/egl/libGLESv2_adreno.so \
     device/samsung/jflte/prebuilt/vendor/lib/egl/libq3dtools_adreno.so:system/vendor/lib/egl/libq3dtools_adreno.so \
+    device/samsung/jflte/prebuilt/vendor/lib/libC2D2.so:system/vendor/lib/libC2D2.so \
+    device/samsung/jflte/prebuilt/vendor/lib/libCB.so:system/vendor/lib/libCB.so \
+    device/samsung/jflte/prebuilt/vendor/lib/libOpenCL.so:system/vendor/lib/libOpenCL.so \
+    device/samsung/jflte/prebuilt/vendor/lib/libOpenVG.so:system/vendor/lib/libOpenVG.so \
+    device/samsung/jflte/prebuilt/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so \
     device/samsung/jflte/prebuilt/vendor/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
     device/samsung/jflte/prebuilt/vendor/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
     device/samsung/jflte/prebuilt/vendor/lib/libc2d30.so:system/vendor/lib/libc2d30.so \
-    device/samsung/jflte/prebuilt/vendor/lib/libC2D2.so:system/vendor/lib/libC2D2.so \
-    device/samsung/jflte/prebuilt/vendor/lib/libCB.so:system/vendor/lib/libCB.so \
     device/samsung/jflte/prebuilt/vendor/lib/libgsl.so:system/vendor/lib/libgsl.so \
     device/samsung/jflte/prebuilt/vendor/lib/libllvm-a3xx.so:system/vendor/lib/libllvm-a3xx.so \
-    device/samsung/jflte/prebuilt/vendor/lib/libOpenCL.so:system/vendor/lib/libOpenCL.so \
-    device/samsung/jflte/prebuilt/vendor/lib/libOpenVG.so:system/vendor/lib/libOpenVG.so \
     device/samsung/jflte/prebuilt/vendor/lib/librs_adreno.so:system/vendor/lib/librs_adreno.so \
     device/samsung/jflte/prebuilt/vendor/lib/librs_adreno_sha1.so:system/vendor/lib/librs_adreno_sha1.so \
-    device/samsung/jflte/prebuilt/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so \
     device/samsung/jflte/prebuilt/vendor/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so
 
 # GPS
@@ -339,9 +339,9 @@ PRODUCT_COPY_FILES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    device/samsung/jflte/prebuilt/vendor/lib/libdivxdrm.so:system/vendor/lib/libdivxdrm.so \
     device/samsung/jflte/prebuilt/vendor/lib/libExtendedExtractor.so:system/vendor/lib/libExtendedExtractor.so \
     device/samsung/jflte/prebuilt/vendor/lib/libI420colorconvert.so:system/vendor/lib/libI420colorconvert.so \
+    device/samsung/jflte/prebuilt/vendor/lib/libdivxdrm.so:system/vendor/lib/libdivxdrm.so \
     device/samsung/jflte/prebuilt/vendor/lib/libmm-color-convertor.so:system/vendor/lib/libmm-color-convertor.so \
     device/samsung/jflte/prebuilt/vendor/lib/libmmosal.so:system/vendor/lib/libmmosal.so \
     device/samsung/jflte/prebuilt/vendor/lib/libmmparser.so:system/vendor/lib/libmmparser.so
@@ -383,9 +383,9 @@ PRODUCT_COPY_FILES += \
 # Widevine
 PRODUCT_COPY_FILES += \
     device/samsung/jflte/prebuilt/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
+    device/samsung/jflte/prebuilt/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
     device/samsung/jflte/prebuilt/vendor/lib/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
     device/samsung/jflte/prebuilt/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
-    device/samsung/jflte/prebuilt/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
     device/samsung/jflte/prebuilt/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so
 
 # Misc
@@ -395,8 +395,8 @@ PRODUCT_COPY_FILES += \
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-    device/samsung/jflte/prebuilt/usr/keylayout/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
     device/samsung/jflte/prebuilt/usr/keylayout/Button_Jack.kl:system/usr/keylayout/Button_Jack.kl \
+    device/samsung/jflte/prebuilt/usr/keylayout/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
     device/samsung/jflte/prebuilt/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     device/samsung/jflte/prebuilt/usr/keylayout/philips_remote_ir.kl:system/usr/keylayout/philips_remote_ir.kl \
     device/samsung/jflte/prebuilt/usr/keylayout/samsung_remote_ir.kl:system/usr/keylayout/samsung_remote_ir.kl \
