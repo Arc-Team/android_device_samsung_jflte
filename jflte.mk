@@ -418,14 +418,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true \
     persist.sys.usb.config=mtp,adb \
     persist.sys.use_16bpp_alpha=1 \
-    persist.timed.enable=true \
     ro.hwui.text_cache_width=2048 \
     ro.ksm.default=1 \
     ro.opengles.version=196608 \
     ro.sf.lcd_density=480 \
     ro.telephony.call_ring.multiple=0 \
-    ro.telephony.ril_class=SamsungQualcommRIL \
-    ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=255
 
