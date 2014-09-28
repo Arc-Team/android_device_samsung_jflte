@@ -1,7 +1,13 @@
 #!/system/bin/sh
 # Host Script xD
 
-busybox rm -f /system/etc/hosts;
-busybox mv /system/etc/host /system/etc/hosts;
-busybox chmod 777 /system/etc/hosts;
-busybox rm -f /system/etc/init.d/04host;
+hostn="/system/etc/hosts"
+hosto="/system/etc/host"
+
+rm -f $hostn
+mv $hosto $hostn;
+chmod 644 $hostn;
+
+if [ ! -f $hosto ]; then
+    rm -f /system/etc/init.d/04host;
+fi;
