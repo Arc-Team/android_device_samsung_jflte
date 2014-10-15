@@ -96,11 +96,6 @@ PRODUCT_PACKAGES += \
     e2fsck \
     setup_fs
 
-# Recovery
-PRODUCT_PACKAGES += \
-    init.recovery.qcom.rc \
-    postrecoveryboot.sh
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
