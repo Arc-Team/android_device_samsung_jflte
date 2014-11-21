@@ -137,6 +137,7 @@ PRODUCT_COPY_FILES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
+    device/samsung/jflte/prebuilt/etc/thermal-engine-8064ab.conf:system/etc/thermal-engine-8064ab.conf \
     device/samsung/jflte/prebuilt/etc/thermal-engine.conf:system/etc/thermal-engine.conf \
     device/samsung/jflte/prebuilt/etc/thermald.conf:system/etc/thermald.conf
 
