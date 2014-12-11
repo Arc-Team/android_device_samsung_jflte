@@ -189,8 +189,11 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/samsung/jfltetmo/sepolicy
 
 BOARD_SEPOLICY_UNION += \
+    bluetooth.te \
     device.te \
+    file.te \
     file_contexts \
+    genfs_contexts \
     healthd.te \
     insthk.te \
     kernel.te \
