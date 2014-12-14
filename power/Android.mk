@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_POWERHAL_VARIANT),jflte)
+ifeq ($(TARGET_POWERHAL_VARIANT),jfltetmo)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE           := power.msm8960

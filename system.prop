@@ -1,40 +1,10 @@
 
 # RIL
-persist.radio.mode_pref_nv10=1
 rild.libargs=-d /dev/smd0
-ro.telephony.ril_class=SamsungQualcommRIL
-
-# radio
-persist.data.ds_fmc_app.mode=0
-persist.data_netmgrd_nint=16
-persist.omh.enabled=1
-persist.radio.add_power_save=1
-persist.radio.apm_sim_not_pwdn=1
-persist.radio.fill_eons=1
-persist.radio.use_se_table_only=1
 rild.libpath=/system/lib/libsec-ril.so
-ro.telephony.ril.v3=newDriverCallU,newDialCode
-
-# Qualcomm
-persist.timed.enable=true
-ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
-
-# Media
-lpa.decode=true
-mm.enable.smoothstreaming=true
-
-# Audio
-persist.audio.fluence.mode=endfire
-persist.audio.vr.enable=false
-persist.audio.handset.mic=digital
-persist.audio.speaker.location=high
-ro.qc.sdk.audio.fluencetype=fluence
-
-# GPS
-ro.gps.agps_provider=1
-ro.qc.sdk.izat.premium_enabled=0
-ro.qc.sdk.izat.service_mask=0x0
-persist.gps.qc_nlp_in_use=0
+telephony.lteOnGsmDevice=1
+ro.telephony.default_network=9
+ro.telephony.ril_class=jflteRIL
 
 # Nitz
 persist.rild.nitz_plmn=""
@@ -87,7 +57,3 @@ ro.device.gpu=Adreno 320
 ro.device.rear_cam=13 MP (4128x3096)
 ro.device.front_cam=2 MP (1280x960)
 ro.device.screen_res=5" 1920x1080 pixels (~441 ppi)
-
-# Recovery
-ro.cwm.enable_key_repeat=true
-ro.cwm.repeatable_keys=114,115

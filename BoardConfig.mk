@@ -1,13 +1,6 @@
-# Vendor
-BOARD_VENDOR := samsung
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/jflte/include
-
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 TARGET_NO_BOOTLOADER := true
-
-# Extensions
-TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/jflte/releasetools
+TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8960
@@ -20,6 +13,7 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 TARGET_CPU_VARIANT := krait
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80200000
@@ -28,7 +22,7 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 zcache msm_rtb.f
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 TARGET_KERNEL_SOURCE := kernel/samsung/jflte
 TARGET_KERNEL_CONFIG := jflte_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.9-cortex-a15
+#TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.9-cortex-a15
 
 # Audio
 BOARD_HAVE_AUDIENCE_ES325_2MIC := true
@@ -43,15 +37,16 @@ BOARD_USES_SEPERATED_AUDIO_INPUT := true
 BOARD_USES_SEPERATED_HEADSET_MIC := true
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true
 BOARD_USES_SEPERATED_VOIP := true
-TARGET_QCOM_AUDIO_VARIANT := caf
 TARGET_USES_QCOM_COMPRESSED_AUDIO := true
+QCOM_ADSP_SSR_ENABLED := false
+QCOM_ANC_HEADSET_ENABLED := false
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/jflte/bluetooth/vnd_jf.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/jflte/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/jfltetmo/bluetooth/vnd_jf.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/jfltetmo/bluetooth
 
 # Graphics
 USE_OPENGL_RENDERER := true
@@ -59,11 +54,12 @@ TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 
 # Display
+BOARD_USES_LEGACY_MMAP := true
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 TARGET_NO_INITLOGO := true
-TARGET_QCOM_DISPLAY_VARIANT := caf
-BOARD_EGL_CFG := device/samsung/jflte/prebuilt/vendor/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/samsung/jfltetmo/prebuilt/vendor/lib/egl/egl.cfg
 COMMON_GLOBAL_CFLAGS += -DNEW_ION_API
 
 # Camera
@@ -97,14 +93,9 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 28
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
-# Vendor Init
-TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_jflte
-TARGET_LIBINIT_DEFINES_FILE := device/samsung/jflte/init/init_jflte.c
-
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_RECOVERY_FSTAB := device/samsung/jflte/rootdir/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/samsung/jfltetmo/rootdir/fstab.qcom
 
 # CWM
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
@@ -141,17 +132,27 @@ TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,noauto_da_alloc,discard,journal_as
 BOARD_BATTERY_DEVICE_NAME := "battery"
 BOARD_CHARGING_CMDLINE_NAME := "androidboot.bootchg"
 BOARD_CHARGING_CMDLINE_VALUE := "true"
-BOARD_CHARGER_RES := device/samsung/jflte/charger
+BOARD_CHARGER_RES := device/samsung/jfltetmo/charger
 
 # Qualcomm
 TARGET_USES_QCOM_BSP := true
 BOARD_USES_QCOM_HARDWARE := true
-COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
+
+# Fonts
+EXTENDED_FONT_FOOTPRINT := true
+
+# Vendor
+BOARD_VENDOR := samsung
+
+# Logging
+TARGET_USES_LOGD := false
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := jflte,jfltetmo
 
 # Media
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
-TARGET_QCOM_MEDIA_VARIANT := caf
 
 # GPS
 TARGET_NO_RPC := true
@@ -160,7 +161,7 @@ TARGET_NO_RPC := true
 BOARD_NFC_HAL_SUFFIX := msm8960
 
 # Power
-TARGET_POWERHAL_VARIANT := jflte
+TARGET_POWERHAL_VARIANT := jfltetmo
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -172,36 +173,41 @@ BOARD_USES_QC_TIME_SERVICES := true
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
 
 # Hardware tunables
-BOARD_HARDWARE_CLASS += device/samsung/jflte/cmhw
+BOARD_HARDWARE_CLASS += device/samsung/jfltetmo/cmhw
 
-# Overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/jflte/overlay
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += device/samsung/jfltetmo/overlay
+
+# Includes
+TARGET_SPECIFIC_HEADER_PATH += device/samsung/jfltetmo/include
+
+# RIL
+BOARD_RIL_CLASS := ../../../device/samsung/jfltetmo/ril
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/samsung/jflte/sepolicy
+include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += device/samsung/jfltetmo/sepolicy
 
 BOARD_SEPOLICY_UNION += \
-    app.te \
-    bluetooth.te \
     device.te \
-    domain.te \
-    drmserver.te \
-    file.te \
     file_contexts \
-    hci_init.te \
     healthd.te \
-    init.te \
-    init_shell.te \
-    keystore.te \
-    kickstart.te \
-    mediaserver.te \
-    nfc.te \
+    insthk.te \
+    kernel.te \
+    keypad_dev.te \
+    mdm_helper.te \
+    mm-pp-daemon.te \
+    mm-qcamerad.te \
+    mpdecision.te \
+    panel_dev.te \
+    property.te \
+    property_contexts \
     rild.te \
-    surfaceflinger.te \
-    system.te \
+    system_app.te \
+    system_server.te \
+    tee.te \
+    thermal-engine.te \
     ueventd.te \
-    wpa.te \
-    wpa_socket.te
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := GT-I9505,GT-I9505G,i9505,i9505g,jflte,jflteatt,jfltecan,jfltecri,jfltecsp,jflterefreshspr,jfltespr,jfltetmo,jflteusc,jfltevzw,jfltexx,jfltezm,jgedlte
+    vibe_dev.te \
+    vold.te \
+    wpa.te

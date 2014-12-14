@@ -3,6 +3,7 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_PROVIDES_CAMERA_HAL),true)
 
 include $(CLEAR_VARS)
+LOCAL_C_INCLUDES       += system/media/camera/include
 LOCAL_MODULE           := camera.msm8960
 LOCAL_MODULE_PATH      := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 LOCAL_MODULE_TAGS      := optional

@@ -1,15 +1,15 @@
 # System
 /dev/block/platform/msm_sdcc.1/by-name/apnhlos     /firmware        vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337    wait
 /dev/block/platform/msm_sdcc.1/by-name/mdm         /firmware-mdm    vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337    wait
-/dev/block/platform/msm_sdcc.1/by-name/boot        /boot            emmc    defaults                                                    defaults
-/dev/block/platform/msm_sdcc.1/by-name/recovery    /recovery        emmc    defaults                                                    defaults
+/dev/block/platform/msm_sdcc.1/by-name/boot        /boot            emmc    defaults                                                    recoveryonly
+/dev/block/platform/msm_sdcc.1/by-name/recovery    /recovery        emmc    defaults                                                    recoveryonly
 /dev/block/platform/msm_sdcc.1/by-name/system      /system          ext4    rw,noatime,barrier=0,errors=panic                           wait
 /dev/block/platform/msm_sdcc.1/by-name/cache       /cache           ext4    noatime,nosuid,nodev,barrier=0,data=ordered,noauto_da_alloc,journal_async_commit,errors=panic    wait,check
 /dev/block/platform/msm_sdcc.1/by-name/efs         /efs             ext4    noatime,nosuid,nodev,barrier=0,data=ordered,noauto_da_alloc,journal_async_commit,errors=panic    wait,check
 /dev/block/platform/msm_sdcc.1/by-name/userdata    /data            ext4    noatime,nosuid,nodev,barrier=0,data=ordered,noauto_da_alloc,journal_async_commit,errors=panic    wait,check,encryptable=footer
 
 # SD Card
-/devices/platform/msm_sdcc.2/mmc_host/mmc2         auto             auto    defaults                                                    voldmanaged=sdcard1:auto
+/devices/platform/msm_sdcc.2/mmc_host/mmc2*        auto             auto    defaults                                                    voldmanaged=sdcard1:auto
 
 # USB Storage
-/devices/platform/msm_hsusb_host/usb               auto             auto    defaults                                                    voldmanaged=usbdisk:auto
+/devices/platform/msm_hsusb_host/usb*              auto             auto    defaults                                                    voldmanaged=usbdisk:auto
