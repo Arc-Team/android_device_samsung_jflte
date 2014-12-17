@@ -294,7 +294,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/vendor/lib/egl/eglsubAndroid.so:system/vendor/lib/egl/eglsubAndroid.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/egl/libEGL_adreno.so:system/vendor/lib/egl/libEGL_adreno.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/egl/libGLES_android.so:system/vendor/lib/egl/libGLES_android.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/egl/libGLESv1_CM_adreno.so:system/vendor/lib/egl/libGLESv1_CM_adreno.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/egl/libGLESv2S3D_adreno.so:system/vendor/lib/egl/libGLESv2S3D_adreno.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/egl/libGLESv2_adreno.so:system/vendor/lib/egl/libGLESv2_adreno.so \
@@ -303,14 +302,11 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libCB.so:system/vendor/lib/libCB.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libOpenCL.so:system/vendor/lib/libOpenCL.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libOpenVG.so:system/vendor/lib/libOpenVG.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libc2d30.so:system/vendor/lib/libc2d30.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libgsl.so:system/vendor/lib/libgsl.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libllvm-a3xx.so:system/vendor/lib/libllvm-a3xx.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/librs_adreno.so:system/vendor/lib/librs_adreno.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/librs_adreno_sha1.so:system/vendor/lib/librs_adreno_sha1.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so
 
 # GPS
@@ -318,8 +314,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libgeofence.so:system/vendor/lib/libgeofence.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libizat_core.so:system/vendor/lib/libizat_core.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/liblbs_core.so:system/vendor/lib/liblbs_core.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/liblocationservice.so:system/vendor/lib/liblocationservice.so
+    device/samsung/jfltetmo/prebuilt/vendor/lib/liblbs_core.so:system/vendor/lib/liblbs_core.so
 
 # HDCP and IPC
 PRODUCT_COPY_FILES += \
@@ -331,7 +326,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libExtendedExtractor.so:system/vendor/lib/libExtendedExtractor.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libI420colorconvert.so:system/vendor/lib/libI420colorconvert.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libdivxdrm.so:system/vendor/lib/libdivxdrm.so \
+    device/samsung/jfltetmo/prebuilt/vendor/lib/libdivxdrmdecrypt.so:system/vendor/lib/libdivxdrmdecrypt.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libmm-color-convertor.so:system/vendor/lib/libmm-color-convertor.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libmmosal.so:system/vendor/lib/libmmosal.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libmmparser.so:system/vendor/lib/libmmparser.so
@@ -385,9 +380,8 @@ PRODUCT_COPY_FILES += \
 # Misc
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/lib/liboemcrypto.so:system/lib/liboemcrypto.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libWVphoneAPI.so:system/vendor/lib/libWVphoneAPI.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libqc-opt.so:system/vendor/lib/libqc-opt.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libthermalclient.so:system/vendor/lib/libthermalclient.so \
+    device/samsung/jfltetmo/prebuilt/vendor/lib/libthermalclient.so:system/vendor/lib/libthermalclient.so
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
