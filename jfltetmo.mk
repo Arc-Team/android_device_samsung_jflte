@@ -72,6 +72,7 @@ PRODUCT_PACKAGES += \
 # Misc
 PRODUCT_PACKAGES += \
     Torch \
+    TimeService \
     libtime_genoff \
     charger_res_images \
     com.android.future.usb.accessory
@@ -377,6 +378,7 @@ PRODUCT_COPY_FILES += \
 # Misc
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/lib/liboemcrypto.so:system/lib/liboemcrypto.so \
+    device/samsung/jfltetmo/prebuilt/lib/TimeService.so:system/lib/libTimeService.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libqc-opt.so:system/vendor/lib/libqc-opt.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libthermalclient.so:system/vendor/lib/libthermalclient.so
 
