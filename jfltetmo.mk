@@ -432,7 +432,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     lpa.decode=true \
-    mm.enable.smoothstreaming=true
+    mm.enable.smoothstreaming=true \
+    media.stagefright.use-awesome=true
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
