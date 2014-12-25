@@ -6,5 +6,5 @@ LOCAL_MODULE_CLASS  := SHARED_LIBRARIES
 LOCAL_MODULE_OWNER  := samsung
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_TAGS   := optional
-LOCAL_SRC_FILES     := lib/vendor/libtime_genoff.so
+LOCAL_SRC_FILES     := vendor/lib/libtime_genoff.so
 include $(BUILD_PREBUILT)
