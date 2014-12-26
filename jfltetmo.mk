@@ -73,6 +73,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Torch \
     libtime_genoff \
+    charger_res_images \
     com.android.future.usb.accessory
 
 # Ramdisk
@@ -85,11 +86,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc
-
-# Charger
-PRODUCT_PACKAGES += \
-    charger \
-    charger_res_images
 
 # Filesystem
 PRODUCT_PACKAGES += \

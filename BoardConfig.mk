@@ -131,7 +131,6 @@ TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,noauto_da_alloc,discard,journal_as
 BOARD_BATTERY_DEVICE_NAME := "battery"
 BOARD_CHARGING_CMDLINE_NAME := "androidboot.bootchg"
 BOARD_CHARGING_CMDLINE_VALUE := "true"
-BOARD_CHARGER_RES := device/samsung/jfltetmo/charger
 
 # Qualcomm
 TARGET_USES_QCOM_BSP := true
