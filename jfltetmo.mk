@@ -434,6 +434,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     lpa.decode=true \
+    qcom.hw.aac.encoder=true \
     mm.enable.smoothstreaming=true \
     media.stagefright.use-awesome=true
 
