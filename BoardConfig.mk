@@ -55,11 +55,9 @@ TARGET_USES_ION := true
 # Display
 BOARD_USES_LEGACY_MMAP := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 TARGET_NO_INITLOGO := true
 BOARD_EGL_CFG := device/samsung/jfltetmo/prebuilt/vendor/lib/egl/egl.cfg
-COMMON_GLOBAL_CFLAGS += -DNEW_ION_API
 
 # Camera
 TARGET_PROVIDES_CAMERA_HAL := true

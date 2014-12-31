@@ -228,15 +228,8 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/lib/libcsd-client.so:system/lib/libcsd-client.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libacdbloader.so:system/vendor/lib/libacdbloader.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libaudcal.so:system/vendor/lib/libaudcal.so
-
-# DRM
-PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libQSEEComAPI.so:system/vendor/lib/libQSEEComAPI.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libdrmdecrypt.so:system/vendor/lib/libdrmdecrypt.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libdrmfs.so:system/vendor/lib/libdrmfs.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libdrmtime.so:system/vendor/lib/libdrmtime.so
+    device/samsung/jfltetmo/prebuilt/lib/libacdbloader.so:system/lib/libacdbloader.so \
+    device/samsung/jfltetmo/prebuilt/lib/libaudcal.so:system/lib/libaudcal.so
 
 # Chromatix
 PRODUCT_COPY_FILES += \
@@ -312,7 +305,8 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libgeofence.so:system/vendor/lib/libgeofence.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libizat_core.so:system/vendor/lib/libizat_core.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/liblbs_core.so:system/vendor/lib/liblbs_core.so
+    device/samsung/jfltetmo/prebuilt/vendor/lib/liblbs_core.so:system/vendor/lib/liblbs_core.so \
+    device/samsung/jfltetmo/prebuilt/vendor/lib/liblocationservice.so:vendor/lib/liblocationservice.so
 
 # HDCP and IPC
 PRODUCT_COPY_FILES += \
@@ -322,43 +316,49 @@ PRODUCT_COPY_FILES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libExtendedExtractor.so:system/vendor/lib/libExtendedExtractor.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libI420colorconvert.so:system/vendor/lib/libI420colorconvert.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libdivxdrmdecrypt.so:system/vendor/lib/libdivxdrmdecrypt.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libmm-color-convertor.so:system/vendor/lib/libmm-color-convertor.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libmmosal.so:system/vendor/lib/libmmosal.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libmmparser.so:system/vendor/lib/libmmparser.so
+    device/samsung/jfltetmo/prebuilt/lib/libSHIMDivxDrm.so:system/lib/libSHIMDivxDrm.so \
+    device/samsung/jfltetmo/prebuilt/lib/libDivxDrm.so:system/lib/libDivxDrm.so \
+    device/samsung/jfltetmo/prebuilt/lib/libExtendedExtractor.so:system/lib/libExtendedExtractor.so \
+    device/samsung/jfltetmo/prebuilt/lib/libI420colorconvert.so:system/lib/libI420colorconvert.so \
+    device/samsung/jfltetmo/prebuilt/lib/libQSEEComAPI.so:system/lib/libQSEEComAPI.so \
+    device/samsung/jfltetmo/prebuilt/lib/libdivxdrmdecrypt.so:system/lib/libdivxdrmdecrypt.so \
+    device/samsung/jfltetmo/prebuilt/lib/libdrmdecrypt.so:system/lib/libdrmdecrypt.so \
+    device/samsung/jfltetmo/prebuilt/lib/libdrmfs.so:system/lib/libdrmfs.so \
+    device/samsung/jfltetmo/prebuilt/lib/libdrmtime.so:system/lib/libdrmtime.so \
+    device/samsung/jfltetmo/prebuilt/lib/libmm-color-convertor.so:system/lib/libmm-color-convertor.so \
+    device/samsung/jfltetmo/prebuilt/lib/libmmosal.so:system/lib/libmmosal.so \
+    device/samsung/jfltetmo/prebuilt/lib/libmmparser.so:system/lib/libmmparser.so
 
 # Postprocessing
 PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libmm-abl-oem.so:system/vendor/lib/libmm-abl-oem.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libmm-abl.so:system/vendor/lib/libmm-abl.so
+    device/samsung/jfltetmo/prebuilt/lib/libmm-abl-oem.so:system/lib/libmm-abl-oem.so \
+    device/samsung/jfltetmo/prebuilt/lib/libmm-abl.so:system/lib/libmm-abl.so
 
 # QMI
 PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libidl.so:system/vendor/lib/libidl.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libqcci_legacy.so:system/vendor/lib/libqcci_legacy.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libqmi.so:system/vendor/lib/libqmi.so \
+    device/samsung/jfltetmo/prebuilt/lib/libidl.so:system/lib/libidl.so \
+    device/samsung/jfltetmo/prebuilt/lib/libqcci_legacy.so:system/lib/libqcci_legacy.so \
+    device/samsung/jfltetmo/prebuilt/lib/libqmi.so:system/lib/libqmi.so \
+    device/samsung/jfltetmo/prebuilt/lib/libqmi_client_qmux.so:system/lib/libqmi_client_qmux.so \
+    device/samsung/jfltetmo/prebuilt/lib/libqmiservices.so:system/lib/libqmiservices.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libqmi_cci.so:system/vendor/lib/libqmi_cci.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libqmi_client_qmux.so:system/vendor/lib/libqmi_client_qmux.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libqmi_common_so.so:system/vendor/lib/libqmi_common_so.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libqmi_csi.so:system/vendor/lib/libqmi_csi.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libqmi_encdec.so:system/vendor/lib/libqmi_encdec.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libqmiservices.so:system/vendor/lib/libqmiservices.so
+    device/samsung/jfltetmo/prebuilt/vendor/lib/libqmi_encdec.so:system/vendor/lib/libqmi_encdec.so
 
 # Radio
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/lib/libatparser.so:system/lib/libatparser.so \
+    device/samsung/jfltetmo/prebuilt/lib/libdsutils.so:system/lib/libdsutils.so \
     device/samsung/jfltetmo/prebuilt/lib/libfactoryutil.so:system/lib/libfactoryutil.so \
+    device/samsung/jfltetmo/prebuilt/lib/libnetmgr.so:system/lib/libnetmgr.so \
     device/samsung/jfltetmo/prebuilt/lib/libomission_avoidance.so:system/lib/libomission_avoidance.so \
     device/samsung/jfltetmo/prebuilt/lib/libreference-ril.so:system/lib/libreference-ril.so \
+    device/samsung/jfltetmo/prebuilt/lib/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \
     device/samsung/jfltetmo/prebuilt/lib/libril.so:system/lib/libril.so \
     device/samsung/jfltetmo/prebuilt/lib/libsec-ril.so:system/lib/libsec-ril.so \
     device/samsung/jfltetmo/prebuilt/lib/libsecril-client.so:system/lib/libsecril-client.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libdiag.so:system/vendor/lib/libdiag.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libdsutils.so:system/vendor/lib/libdsutils.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libnetmgr.so:system/vendor/lib/libnetmgr.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libril-qcril-hook-oem.so:system/vendor/lib/libril-qcril-hook-oem.so
+    device/samsung/jfltetmo/prebuilt/vendor/lib/libdiag.so:system/vendor/lib/libdiag.so
 
 # Sensors
 PRODUCT_COPY_FILES += \
@@ -368,19 +368,23 @@ PRODUCT_COPY_FILES += \
 # Widevine
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/lib/drm/libfwdlockengine.so:system/lib/drm/libfwdlockengine.so \
+    device/samsung/jfltetmo/prebuilt/lib/libwvm.so:system/lib/libwvm.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so\
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/mediadrm/libdrmclearkeyplugin.so:system/vendor/lib/mediadrm/libdrmclearkeyplugin.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so
 
 # Misc
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/lib/liboemcrypto.so:system/lib/liboemcrypto.so \
-    device/samsung/jfltetmo/prebuilt/lib/TimeService.so:system/lib/libTimeService.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libqc-opt.so:system/vendor/lib/libqc-opt.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libthermalclient.so:system/vendor/lib/libthermalclient.so
+    device/samsung/jfltetmo/prebuilt/lib/libqc-opt.so:system/lib/libqc-opt.so \
+    device/samsung/jfltetmo/prebuilt/lib/libthermalclient.so:system/lib/libthermalclient.so
+
+# Time
+PRODUCT_COPY_FILES += \
+    device/samsung/jfltetmo/prebuilt/lib/libTimeService.so:system/lib/libTimeService.so \
+    device/samsung/jfltetmo/prebuilt/vendor/lib/libtime_genoff.so:system/vendor/lib/libtime_genoff.so
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
@@ -459,7 +463,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Qualcomm
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true \
-    ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
+    ro.vendor.extension_library=/system/lib/libqc-opt.so
 
 # Recovery
 PRODUCT_PROPERTY_OVERRIDES += \
