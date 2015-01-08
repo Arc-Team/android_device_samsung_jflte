@@ -436,7 +436,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     lpa.decode=true \
     qcom.hw.aac.encoder=true \
     mm.enable.smoothstreaming=true \
-    media.stagefright.use-awesome=true
+    persist.sys.media.use-awesome=true
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
