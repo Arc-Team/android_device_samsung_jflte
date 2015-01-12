@@ -21,13 +21,6 @@
      for different hardware and product builds. -->
 <resources>
 
-    <!-- Our amoled doesn't animate well. needed for crt effect -->
-    <bool name="config_animateScreenLights">false</bool>
-
-    <!-- Flag indicating whether we should enable the automatic brightness in Settings.
-         config_hardware_automatic_brightness_available is not set, so we will use software implementation -->
-    <bool name="config_automatic_brightness_available">true</bool>
-
     <!-- Control whether being in the desk dock should enable accelerometer
          based screen orientation.  This defaults to true because it is
          common for desk docks to be sold in a variety of form factors
@@ -341,5 +334,12 @@
         <item>gprs:4092,8760,11680,4096,8760,11680</item>
         <item>evdo:4094,87380,262144,4096,16384,262144</item>
     </string-array>
+
+    <!-- Our amoled doesn't animate well. needed for crt effect -->
+    <bool name="config_animateScreenLights">false</bool>
+
+    <!-- Flag indicating whether we should enable the automatic brightness in Settings.
+         config_hardware_automatic_brightness_available is not set, so we will use software implementation -->
+    <bool name="config_automatic_brightness_available">true</bool>
 
 </resources>

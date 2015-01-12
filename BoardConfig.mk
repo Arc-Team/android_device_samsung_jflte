@@ -53,18 +53,18 @@ TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 
 # Display
+BOARD_EGL_CFG := device/samsung/jfltetmo/prebuilt/vendor/lib/egl/egl.cfg
 BOARD_USES_LEGACY_MMAP := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 TARGET_NO_INITLOGO := true
-BOARD_EGL_CFG := device/samsung/jfltetmo/prebuilt/vendor/lib/egl/egl.cfg
 
 # Camera
 TARGET_PROVIDES_CAMERA_HAL := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE
 
-# Wifi
+# WiFi
 BOARD_WLAN_DEVICE := bcmdhd
 BOARD_HAVE_SAMSUNG_WIFI := true
 BOARD_HOSTAPD_DRIVER := NL80211
@@ -93,9 +93,9 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_FSTAB := device/samsung/jfltetmo/rootdir/fstab.qcom
-
-# CWM
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
+
+# Recovery
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true
@@ -165,7 +165,7 @@ TARGET_PROVIDES_LIBLIGHT := true
 # Healthd
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
 
-# Hardware tunables
+# CMHW
 BOARD_HARDWARE_CLASS += device/samsung/jfltetmo/cmhw
 
 # Overlays

@@ -1,8 +1,6 @@
-LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),jfltetmo)
-    include $(call all-makefiles-under,$(LOCAL_PATH))
-    include $(CLEAR_VARS)
+    include $(call all-makefiles-under,$(call my-dir))
 
 # Create /firmware-mdm links
 FIRMWARE_MDM_IMAGES := \

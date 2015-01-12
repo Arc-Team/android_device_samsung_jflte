@@ -6,43 +6,18 @@ telephony.lteOnGsmDevice=1
 ro.telephony.default_network=9
 ro.telephony.ril_class=jflteRIL
 
-# Nitz
-persist.rild.nitz_plmn=""
-persist.rild.nitz_long_ons_0=""
-persist.rild.nitz_long_ons_1=""
-persist.rild.nitz_long_ons_2=""
-persist.rild.nitz_long_ons_3=""
-persist.rild.nitz_short_ons_0=""
-persist.rild.nitz_short_ons_1=""
-persist.rild.nitz_short_ons_2=""
-persist.rild.nitz_short_ons_3=""
-
 # Tweaks
-mot.proximity.delay=25
 pm.sleep_mode=1
 power_supply.wakeup=enable
 profiler.force_disable_err_rpt=1
 profiler.force_disable_ulog=1
-proximity_incall=enable
 ro.config.hw_fast_dormancy=1
 ro.config.hw_power_saving=1
 ro.config.hw_quickpoweron=true
 ro.config.nocheckin=1
 ro.kernel.android.checkjni=0
 ro.kernel.checkjni=0
-ro.lge.proximity.delay=25
 ro.ril.disable.power.collapse=1
-ro.telephony.call_ring.delay=0
-
-# 3G/HSDPA
-ro.ril.enable.3g.prefix=1
-ro.ril.enable.a53=1
-ro.ril.enable.dtm=1
-ro.ril.gprsclass=12
-ro.ril.hep=1
-ro.ril.hsdpa.category=8
-ro.ril.hsupa.category=5
-ro.ril.hsxpa=2
 
 # Network
 net.dns1=8.8.8.8
