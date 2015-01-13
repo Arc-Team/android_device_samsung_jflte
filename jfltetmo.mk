@@ -79,13 +79,10 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.carrier.rc \
-    init.crda.sh \
-    init.qcom.rc \
-    init.qcom.usb.rc \
-    init.target.rc \
-    ueventd.qcom.rc
+    fstab.jfltetmo \
+    init.jfltetmo.rc \
+    init.jfltetmo.usb.rc \
+    ueventd.jfltetmo.rc
 
 # Filesystem
 PRODUCT_PACKAGES += \
@@ -203,9 +200,10 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/thermal-engine.conf:system/etc/thermal-engine.conf \
     device/samsung/jfltetmo/prebuilt/lib/libthermalclient.so:system/lib/libthermalclient.so
 
-# HOSTS/DALVIK
+# Hosts/Dalvilk
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/host:system/etc/host \
+    device/samsung/jfltetmo/prebuilt/etc/init.crda.sh:system/etc/init.crda.sh \
     device/samsung/jfltetmo/prebuilt/etc/init.d/01dalvik:system/etc/init.d/01dalvik \
     device/samsung/jfltetmo/prebuilt/etc/init.d/04host:/system/etc/init.d/04host
 
