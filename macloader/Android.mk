@@ -6,7 +6,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE           := macloader
 LOCAL_MODULE_TAGS      := optional
 LOCAL_SHARED_LIBRARIES := liblog libutils
-LOCAL_SRC_FILES        := macloader.cpp
+LOCAL_SRC_FILES        := macloader.c
 include $(BUILD_EXECUTABLE)
 
 endif
