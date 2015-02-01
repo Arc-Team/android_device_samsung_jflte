@@ -111,6 +111,7 @@ BOARD_RECOVERY_SWIPE := true
 
 # TWRP
 BOARD_HAS_NO_REAL_SDCARD := true
+BOARD_SUPPRESS_EMMC_WIPE := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/file
@@ -120,7 +121,7 @@ TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,noauto_da_alloc,discard,journal_as
 TW_CRYPTO_FS_TYPE := "ext4"
 TW_CRYPTO_KEY_LOC := "footer"
 TW_CRYPTO_MNT_POINT := "/data"
-TW_CRYPTO_REAL_BLKDEV := "/dev/block/mmcblk0p29"
+TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/msm_sdcc.1/by-name/userdata"
 TW_HAS_DOWNLOAD_MODE := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_SAMSUNG := true
