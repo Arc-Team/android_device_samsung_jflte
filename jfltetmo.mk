@@ -71,7 +71,6 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
-    Torch \
     TimeService \
     libtime_genoff \
     charger_res_images \
