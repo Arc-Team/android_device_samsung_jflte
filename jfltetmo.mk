@@ -479,6 +479,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true \
     ro.vendor.extension_library=/system/lib/libqc-opt.so
 
+# USB
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.isUsbOtgEnabled=true
+
 # Density
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
