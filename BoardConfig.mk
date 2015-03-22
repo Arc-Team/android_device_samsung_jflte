@@ -24,7 +24,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := androidboot.hardware=jfltetmo user_debug=31 zcache msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 TARGET_KERNEL_SOURCE := kernel/samsung/jflte
-TARGET_KERNEL_CONFIG := jflte_defconfig
+TARGET_KERNEL_CONFIG := jf_defconfig
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.9-cortex-a15
 
 # Audio
