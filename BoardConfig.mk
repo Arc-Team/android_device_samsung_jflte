@@ -96,10 +96,14 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_RECOVERY_FSTAB := device/samsung/jfltetmo/rootdir/fstab.jfltetmo
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
+ifeq ($(RECOVERY_VARIANT),twrp)
+    TARGET_RECOVERY_FSTAB := device/samsung/jfltetmo/recovery/twrp.fstab
+else
+    TARGET_RECOVERY_FSTAB := device/samsung/jfltetmo/rootdir/fstab.jfltetmo
+endif
 
-# Recovery
+# CWM
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true
@@ -111,7 +115,6 @@ BOARD_HAS_NO_REAL_SDCARD := true
 DEVICE_RESOLUTION := 1080x1920
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
-TWRP_EVENT_LOGGING := true
 TW_CRYPTO_FS_FLAGS := "0x00000406"
 TW_CRYPTO_FS_TYPE := "ext4"
 TW_CRYPTO_KEY_LOC := "footer"
