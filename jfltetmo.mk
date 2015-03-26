@@ -283,7 +283,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libgeofence.so:system/vendor/lib/libgeofence.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libizat_core.so:system/vendor/lib/libizat_core.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/liblbs_core.so:system/vendor/lib/liblbs_core.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/liblocationservice.so:vendor/lib/liblocationservice.so
+    device/samsung/jfltetmo/prebuilt/vendor/lib/liblocationservice.so:system/vendor/lib/liblocationservice.so
 
 # HDCP and IPC
 PRODUCT_COPY_FILES += \
