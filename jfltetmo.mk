@@ -404,7 +404,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.egl.hw=1 \
     debug.mdpcomp.logs=0 \
     persist.hwc.mdpcomp.enable=true \
     debug.sf.hw=1 \
@@ -451,7 +450,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Extra
 PRODUCT_PROPERTY_OVERRIDES += \
-    com.qc.hardware=true \
     persist.sys.usb.config=mtp \
     ro.telephony.call_ring.multiple=0 \
     persist.service.adb.enable=1 \
