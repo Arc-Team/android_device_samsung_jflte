@@ -72,6 +72,7 @@ PRODUCT_PACKAGES += \
 # Misc
 PRODUCT_PACKAGES += \
     TimeService \
+    SamsungDoze \
     libtime_genoff \
     charger_res_images \
     com.android.future.usb.accessory
