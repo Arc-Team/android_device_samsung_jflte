@@ -100,7 +100,6 @@ PRODUCT_PACKAGES += \
 ADDITIONAL_DEFAULT_PROPERTIES += \
     persist.service.adb.enable=1 \
     persist.service.debuggable=1 \
-    persist.sys.usb.config=mtp \
     ro.adb.secure=0
 
 # Extra
