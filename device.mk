@@ -285,6 +285,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
 
-# Common Qualcomm
-$(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.hw=1 \
+    debug.mdpcomp.logs=0 \
+    persist.hwc.mdpcomp.enable=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.call_ring.multiple=0
+
+# Charger images
+PRODUCT_PACKAGES += \
+    charger_res_images
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+    make_ext4fs \
+    setup_fs
 

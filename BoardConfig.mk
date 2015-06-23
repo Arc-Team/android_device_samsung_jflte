@@ -20,8 +20,33 @@
 # definition file).
 #
 
-# inherit from qcom-common
--include device/samsung/qcom-common/BoardConfigCommon.mk
+BOARD_VENDOR := samsung
+
+# Bootloader
+TARGET_NO_BOOTLOADER := true
+
+# Architecture
+TARGET_ARCH := arm
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
+
+# Graphics
+USE_OPENGL_RENDERER := true
+TARGET_USES_C2D_COMPOSITION := true
+TARGET_USES_ION := true
+
+# Healthd
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
+
+# Qualcomm support
+BOARD_USES_QCOM_HARDWARE := true
+
+# Recovery
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+BOARD_HAS_DOWNLOAD_MODE := true
+COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8960
