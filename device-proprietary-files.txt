@@ -1,5 +1,0 @@
-# Add device specific blobs here
-
-# Radio
-lib/libsec-ril.so
-lib/libril.so
