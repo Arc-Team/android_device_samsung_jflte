@@ -138,12 +138,32 @@ TARGET_POWERHAL_VARIANT := jfltetmo
 
 # Recovery
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
+TARGET_RECOVERY_FSTAB := device/samsung/jfltetmo/rootdir/etc/fstab.qcom
+
+# CWM
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
-TARGET_RECOVERY_FSTAB := device/samsung/jfltetmo/rootdir/etc/fstab.qcom
+
+# TWRP
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+RECOVERY_SDCARD_ON_DATA := true
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/file
+TW_BRIGHTNESS_PATH := /sys/devices/platform/msm_fb.526593/leds/lcd-backlight/brightness
+TW_CRYPTO_FS_FLAGS := "0x00000406"
+TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,noauto_da_alloc,discard,journal_async_commit,errors=panic wait,check,encryptable=footer"
+TW_CRYPTO_FS_TYPE := "ext4"
+TW_CRYPTO_KEY_LOC := "footer"
+TW_CRYPTO_MNT_POINT := "/data"
+TW_CRYPTO_REAL_BLKDEV := "/dev/block/mmcblk0p29"
+TW_HAS_DOWNLOAD_MODE := true
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_SAMSUNG := true
+TW_NO_REBOOT_BOOTLOADER := true
+TW_THEME := portrait_hdpi
 
 # RIL
 BOARD_RIL_CLASS := ../../../device/samsung/jfltetmo/ril
