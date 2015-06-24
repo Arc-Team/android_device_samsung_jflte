@@ -59,12 +59,12 @@ TARGET_CPU_VARIANT := krait
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 zcache msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE := androidboot.hardware=jfltetmo user_debug=31 zcache msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 BOARD_KERNEL_PAGESIZE := 2048
-TARGET_KERNEL_CONFIG := cyanogen_jf_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/jf
+TARGET_KERNEL_CONFIG := jfltetmo_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/jfltetmo
 
 # Audio
 BOARD_HAVE_AUDIENCE_ES325_2MIC := true
@@ -138,7 +138,7 @@ TARGET_POWERHAL_VARIANT := jfltetmo
 
 # Recovery
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
-TARGET_RECOVERY_FSTAB := device/samsung/jfltetmo/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/samsung/jfltetmo/rootdir/etc/fstab.jfltetmo
 
 # CWM
 BOARD_USES_MMCUTILS := true

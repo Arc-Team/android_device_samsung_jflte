@@ -328,6 +328,7 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras
 
 PRODUCT_COPY_FILES += \
+    device/samsung/jfltetmo/prebuilt/etc/init.crda.sh:system/etc/init.crda.sh \
     device/samsung/jfltetmo/prebuilt/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     device/samsung/jfltetmo/prebuilt/etc/nfcee_access.xml:system/etc/nfcee_access.xml
 
@@ -352,13 +353,10 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.carrier.rc \
-    init.crda.sh \
-    init.qcom.rc \
-    init.qcom.usb.rc \
-    init.target.rc \
-    ueventd.qcom.rc
+    fstab.jfltetmo \
+    init.jfltetmo.rc \
+    init.jfltetmo.usb.rc \
+    ueventd.jfltetmo.rc
 
 # Thermal
 PRODUCT_COPY_FILES += \
