@@ -88,9 +88,22 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs
 
-# System Properties
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
+# Default Properties
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    persist.sys.root_access=3 \
+    ro.adb.secure=0 \
+    ro.secure=0
+
+# Extra
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1 \
+    persist.sys.root_access=1 \
+    persist.sys.usb.config=mtp \
+    ro.adb.secure=0 \
+    ro.debuggable=1 \
+    ro.ksm.default=1 \
+    ro.secure=0
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
