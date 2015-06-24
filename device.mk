@@ -259,12 +259,12 @@ PRODUCT_PACKAGES += \
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/audio/audio_policy.conf:system/etc/audio_policy.conf \
-    device/samsung/jfltetmo/audio/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3
+    device/samsung/jfltetmo/prebuilt/audio_policy.conf:system/etc/audio_policy.conf \
+    device/samsung/jfltetmo/prebuilt/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
+    device/samsung/jfltetmo/prebuilt/vendor/firmware/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
 
 # Camera Wrapper
 PRODUCT_PACKAGES += \
@@ -299,13 +299,13 @@ PRODUCT_PACKAGES += \
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/keylayout/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
-    device/samsung/jfltetmo/keylayout/Button_Jack.kl:system/usr/keylayout/Button_Jack.kl \
-    device/samsung/jfltetmo/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/samsung/jfltetmo/keylayout/philips_remote_ir.kl:system/usr/keylayout/philips_remote_ir.kl \
-    device/samsung/jfltetmo/keylayout/samsung_remote_ir.kl:system/usr/keylayout/samsung_remote_ir.kl \
-    device/samsung/jfltetmo/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
-    device/samsung/jfltetmo/keylayout/ue_rf4ce_remote.kl:system/usr/keylayout/ue_rf4ce_remote.kl
+    device/samsung/jfltetmo/prebuilt/usr/keylayout/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
+    device/samsung/jfltetmo/prebuilt/usr/keylayout/Button_Jack.kl:system/usr/keylayout/Button_Jack.kl \
+    device/samsung/jfltetmo/prebuilt/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/samsung/jfltetmo/prebuilt/usr/keylayout/philips_remote_ir.kl:system/usr/keylayout/philips_remote_ir.kl \
+    device/samsung/jfltetmo/prebuilt/usr/keylayout/samsung_remote_ir.kl:system/usr/keylayout/samsung_remote_ir.kl \
+    device/samsung/jfltetmo/prebuilt/usr/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
+    device/samsung/jfltetmo/prebuilt/usr/keylayout/ue_rf4ce_remote.kl:system/usr/keylayout/ue_rf4ce_remote.kl
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -319,8 +319,8 @@ PRODUCT_COPY_FILES += \
 
 # Media Profile
 PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    device/samsung/jfltetmo/configs/media_profiles.xml:system/etc/media_profiles.xml
+    device/samsung/jfltetmo/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
+    device/samsung/jfltetmo/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
 
 # NFC packages
 PRODUCT_PACKAGES += \
@@ -332,8 +332,8 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras
 
 PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    device/samsung/jfltetmo/configs/nfcee_access.xml:system/etc/nfcee_access.xml
+    device/samsung/jfltetmo/prebuilt/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    device/samsung/jfltetmo/prebuilt/etc/nfcee_access.xml:system/etc/nfcee_access.xml
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -366,8 +366,8 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/configs/thermal-engine.conf:system/etc/thermal-engine.conf \
-    device/samsung/jfltetmo/configs/thermal-engine-8064ab.conf:system/etc/thermal-engine-8064ab.conf
+    device/samsung/jfltetmo/prebuilt/etc/thermal-engine.conf:system/etc/thermal-engine.conf \
+    device/samsung/jfltetmo/prebuilt/etc/thermal-engine-8064ab.conf:system/etc/thermal-engine-8064ab.conf
 
 # USB
 PRODUCT_PACKAGES += \
@@ -383,8 +383,8 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
-    device/samsung/jfltetmo/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
+    device/samsung/jfltetmo/prebuilt/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    device/samsung/jfltetmo/prebuilt/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 # audio
 PRODUCT_PROPERTY_OVERRIDES += \
