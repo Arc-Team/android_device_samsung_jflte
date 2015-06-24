@@ -122,8 +122,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.add_power_save=1 \
     persist.radio.fill_eons=1 \
     persist.radio.use_se_table_only=1 \
+    ro.ril.telephony.mqanelements=6 \
+    ro.telephony.call_ring.multiple=0 \
+    ro.telephony.default_network=9 \
     ro.telephony.ril.config=newDriverCallU,newDialCode \
-    ro.ril.telephony.mqanelements=6
+    ro.telephony.ril_class=jflteRIL \
+    telephony.lteOnGsmDevice=1
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
