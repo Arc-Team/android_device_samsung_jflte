@@ -290,8 +290,8 @@ PRODUCT_PACKAGES += \
     gps.msm8960
 
 PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/gps/etc/gps.conf:/system/etc/gps.conf \
-    device/samsung/jfltetmo/gps/etc/sap.conf:/system/etc/sap.conf
+    device/samsung/jfltetmo/prebuilt/etc/gps.conf:/system/etc/gps.conf \
+    device/samsung/jfltetmo/prebuilt/etc/sap.conf:/system/etc/sap.conf
 
 # IR
 PRODUCT_PACKAGES += \
