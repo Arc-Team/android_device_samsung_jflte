@@ -151,6 +151,9 @@ TARGET_POWERHAL_VARIANT := jfltetmo
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Logging
+TARGET_USES_LOGD := false
+
 # Healthd
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
 
