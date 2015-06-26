@@ -249,6 +249,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/init.crda.sh:system/etc/init.crda.sh
 
+# Dalvik-Hack
+PRODUCT_COPY_FILES += \
+    device/samsung/jfltetmo/prebuilt/etc/init.d/01dalvik:system/etc/init.d/01dalvik
+
 # IPC
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/irsc_util:system/bin/irsc_util \
