@@ -15,7 +15,6 @@ PRODUCT_PACKAGES += \
 
 # MSM8960
 PRODUCT_PACKAGES += \
-    camera.msm8960 \
     gps.msm8960 \
     consumerir.msm8960 \
     lights.msm8960 \
@@ -301,6 +300,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/cameradata/RS_M10MO_SS.bin:system/cameradata/RS_M10MO_SS.bin \
     device/samsung/jfltetmo/prebuilt/cameradata/datapattern_420sp.yuv:system/cameradata/datapattern_420sp.yuv \
     device/samsung/jfltetmo/prebuilt/cameradata/datapattern_front_420sp.yuv:system/cameradata/datapattern_front_420sp.yuv \
+    device/samsung/jfltetmo/prebuilt/lib/hw/camera.msm8960.so:system/lib/hw/camera.msm8960.so \
     device/samsung/jfltetmo/prebuilt/lib/hw/camera.vendor.msm8960.so:system/lib/hw/camera.vendor.msm8960.so \
     device/samsung/jfltetmo/prebuilt/lib/libadsprpc.so:system/lib/libadsprpc.so \
     device/samsung/jfltetmo/prebuilt/lib/libgemini.so:system/lib/libgemini.so \
