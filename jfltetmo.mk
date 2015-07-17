@@ -102,9 +102,13 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     persist.service.debuggable=1 \
     ro.adb.secure=0
 
-# Extra
+# Art
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-flags=--no-watch-dog \
+    dalvik.vm.dex2oat-swap=false
+
+# Extra
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
     ro.enable_boot_charger_mode=1 \
     ro.com.google.locationfeatures=1
