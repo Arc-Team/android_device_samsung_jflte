@@ -228,6 +228,7 @@ PRODUCT_COPY_FILES += \
 
 # Bins
 PRODUCT_COPY_FILES += \
+    device/samsung/jfltetmo/prebuilt/bin/bsod_killer:system/bin/bsod_killer \
     device/samsung/jfltetmo/prebuilt/bin/mpdecision:system/bin/mpdecision \
     device/samsung/jfltetmo/prebuilt/bin/radish:system/bin/radish \
     device/samsung/jfltetmo/prebuilt/bin/thermal-engine:system/bin/thermal-engine \
