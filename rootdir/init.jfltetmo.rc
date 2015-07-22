@@ -81,6 +81,9 @@ on boot
     write /sys/devices/i2c-3/3-005b/update_fw 1
     start qcamerasvr
 
+    # Start BSOD Killer
+    start bsod_killer
+
     # Permissions for bluetooth.
     setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
     chown bluetooth net_bt_stack ro.bt.bdaddr_path
@@ -603,6 +606,13 @@ service time_daemon /system/bin/time_daemon
     class late_start
     user root
     group root
+
+# BSOD Killer
+service bsod_killer /system/bin/bsod_killer
+    user root
+    group shell
+    disabled
+    oneshot
 
 # insthk
 service insthk /system/bin/insthk
