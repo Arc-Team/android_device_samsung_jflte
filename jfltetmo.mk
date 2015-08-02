@@ -80,6 +80,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.jfltetmo \
     init.jfltetmo.rc \
+    init.jfltetmo.power.rc \
     init.jfltetmo.usb.rc \
     ueventd.jfltetmo.rc
 
@@ -103,6 +104,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 # Extra
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
+    ro.enable_boot_charger_mode=1 \
     persist.sys.isUsbOtgEnabled=true \
     ro.com.google.locationfeatures=1
 
