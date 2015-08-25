@@ -225,6 +225,7 @@ PRODUCT_COPY_FILES += \
 # Bins
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/mpdecision:system/bin/mpdecision \
+    device/samsung/jfltetmo/prebuilt/bin/radish:system/bin/radish \
     device/samsung/jfltetmo/prebuilt/bin/thermal-engine:system/bin/thermal-engine \
     device/samsung/jfltetmo/prebuilt/lib/libqc-opt.so:system/lib/libqc-opt.so \
     device/samsung/jfltetmo/prebuilt/lib/libthermalclient.so:system/lib/libthermalclient.so
