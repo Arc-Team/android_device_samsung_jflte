@@ -89,6 +89,11 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs
 
+# IPv6 tethering
+PRODUCT_PACKAGES += \
+    ebtables \
+    ethertypes
+
 # Default Properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
     persist.sys.root_access=3 \
