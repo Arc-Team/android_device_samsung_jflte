@@ -226,6 +226,13 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
+# Custom format
+ifeq ($(TARGET_CUSTOM_SYSTEM_FORMAT),true)
+PRODUCT_COPY_FILES += \
+    device/samsung/jfltetmo/prebuilt/etc/format.sh:install/bin/format.sh \
+    device/samsung/jfltetmo/rootdir/fstab.f2fs:root/fstab.jfltetmo
+endif
+
 # Bins
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/bsod_killer:system/bin/bsod_killer \
