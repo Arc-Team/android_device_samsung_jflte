@@ -95,20 +95,16 @@ PRODUCT_PACKAGES += \
 
 # Default Properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
-    persist.sys.root_access=3 \
-    ro.adb.secure=0 \
-    ro.secure=0
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1 \
+    persist.sys.usb.config=mtp \
+    ro.adb.secure=0
 
 # Extra
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.service.adb.enable=1 \
-    persist.service.debuggable=1 \
-    persist.sys.root_access=1 \
-    persist.sys.usb.config=mtp \
-    ro.adb.secure=0 \
-    ro.debuggable=1 \
-    ro.ksm.default=1 \
-    ro.secure=0
+    ro.setupwizard.enable_bypass=1 \
+    persist.sys.isUsbOtgEnabled=true \
+    ro.com.google.locationfeatures=1
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -181,10 +177,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true \
     ro.vendor.extension_library=/system/lib/libqc-opt.so
-
-# USB
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.isUsbOtgEnabled=true
 
 # Density
 PRODUCT_AAPT_CONFIG := normal
