@@ -83,6 +83,8 @@ on boot
 
     # Start BSOD Killer
     start bsod_killer
+    rmdir /data/system/recent_images
+    rmdir /data/system/recent_tasks
 
     # Permissions for bluetooth.
     setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
