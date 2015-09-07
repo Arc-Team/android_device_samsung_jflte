@@ -266,6 +266,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/init.d/89bsod:system/etc/init.d/89bsod
 
+# Boot Cleaner
+PRODUCT_COPY_FILES += \
+    device/samsung/jfltetmo/prebuilt/etc/init.d/81clean:system/etc/init.d/81clean
+
 # IPC
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/irsc_util:system/bin/irsc_util \
