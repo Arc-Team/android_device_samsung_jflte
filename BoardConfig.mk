@@ -162,6 +162,9 @@ TARGET_PROVIDES_LIBLIGHT := true
 # Logging
 TARGET_USES_LOGD := false
 
+# WebView version
+PREBUILT_WEBVIEW_VERSION := beta
+
 # Healthd
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
 
