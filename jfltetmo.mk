@@ -107,7 +107,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-flags=--no-watch-dog \
     ro.setupwizard.enable_bypass=1 \
     ro.enable_boot_charger_mode=1 \
-    persist.sys.isUsbOtgEnabled=true \
     ro.com.google.locationfeatures=1
 
 # Audio
