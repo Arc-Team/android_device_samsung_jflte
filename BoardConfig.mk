@@ -149,6 +149,7 @@ TARGET_OTA_ASSERT_DEVICE := jfltetmo,jflte
 
 # GPS
 TARGET_NO_RPC := true
+TARGET_GPS_HAL_PATH := device/samsung/jf-common/gps
 
 # NFC
 BOARD_NFC_HAL_SUFFIX := msm8960
