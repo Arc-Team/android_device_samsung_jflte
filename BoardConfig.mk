@@ -160,9 +160,6 @@ TARGET_POWERHAL_VARIANT := qcom
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# Logging
-TARGET_USES_LOGD := false
-
 # WebView version
 PREBUILT_WEBVIEW_VERSION := beta
 
