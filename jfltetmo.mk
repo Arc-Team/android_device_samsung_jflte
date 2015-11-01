@@ -233,9 +233,7 @@ endif
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/mpdecision:system/bin/mpdecision \
     device/samsung/jfltetmo/prebuilt/bin/radish:system/bin/radish \
-    device/samsung/jfltetmo/prebuilt/bin/thermal-engine:system/bin/thermal-engine \
-    device/samsung/jfltetmo/prebuilt/lib/libqc-opt.so:system/lib/libqc-opt.so \
-    device/samsung/jfltetmo/prebuilt/lib/libthermalclient.so:system/lib/libthermalclient.so
+    device/samsung/jfltetmo/prebuilt/lib/libqc-opt.so:system/lib/libqc-opt.so
 
 # Wi-Fi
 PRODUCT_COPY_FILES += \
@@ -287,11 +285,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/time_daemon:system/bin/time_daemon \
     device/samsung/jfltetmo/prebuilt/lib/libTimeService.so:system/lib/libTimeService.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libtime_genoff.so:system/vendor/lib/libtime_genoff.so
-
-# Thermal
-PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/prebuilt/etc/thermal-engine-8064ab.conf:system/etc/thermal-engine-8064ab.conf \
-    device/samsung/jfltetmo/prebuilt/etc/thermal-engine.conf:system/etc/thermal-engine.conf
 
 # Audio
 PRODUCT_COPY_FILES += \
