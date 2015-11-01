@@ -180,7 +180,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Qualcomm
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true \
-    ro.vendor.extension_library=/system/lib/libqc-opt.so
+    ro.vendor.extension_library=libqti-perfd-client.so
 
 # Density
 PRODUCT_AAPT_CONFIG := normal
