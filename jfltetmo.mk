@@ -16,7 +16,6 @@ PRODUCT_PACKAGES += \
 # MSM8960
 PRODUCT_PACKAGES += \
     camera.msm8960 \
-    gps.msm8960 \
     consumerir.msm8960 \
     lights.msm8960 \
     power.msm8960
@@ -374,7 +373,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/loc_launcher:system/bin/loc_launcher \
     device/samsung/jfltetmo/prebuilt/etc/gps.conf:/system/etc/gps.conf \
-    device/samsung/jfltetmo/prebuilt/etc/sap.conf:/system/etc/sap.conf \
     device/samsung/jfltetmo/prebuilt/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libgeofence.so:system/vendor/lib/libgeofence.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libizat_core.so:system/vendor/lib/libizat_core.so \
