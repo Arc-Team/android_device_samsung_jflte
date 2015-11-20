@@ -372,7 +372,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/loc_launcher:system/bin/loc_launcher \
     device/samsung/jfltetmo/prebuilt/etc/gps.conf:/system/etc/gps.conf \
+    device/samsung/jfltetmo/prebuilt/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
+    device/samsung/jfltetmo/prebuilt/lib/libgps.utils.so:system/lib/libgps.utils.so \
     device/samsung/jfltetmo/prebuilt/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
+    device/samsung/jfltetmo/prebuilt/lib/libloc_core.so:system/lib/libloc_core.so \
+    device/samsung/jfltetmo/prebuilt/lib/libloc_eng.so:system/lib/libloc_eng.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libgeofence.so:system/vendor/lib/libgeofence.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libizat_core.so:system/vendor/lib/libizat_core.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/liblbs_core.so:system/vendor/lib/liblbs_core.so \
