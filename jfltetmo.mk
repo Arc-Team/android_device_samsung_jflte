@@ -108,8 +108,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Extra
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
-    ro.enable_boot_charger_mode=1 \
-    ro.com.google.locationfeatures=1
+    ro.enable_boot_charger_mode=1
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \

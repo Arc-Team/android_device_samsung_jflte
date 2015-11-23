@@ -25,7 +25,7 @@ on boot
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 04E8
     write /sys/class/android_usb/android0/idProduct 685B
-    write /sys/class/android_usb/android0/f_mass_storage/inquiry_string "Samsung Phone                0000"
+    write /sys/class/android_usb/android0/f_mass_storage/inquiry_string Samsung
     setprop usb.vendor 04E8
     setprop usb.product.adb 685B
     setprop usb.product.mtpadb 6860

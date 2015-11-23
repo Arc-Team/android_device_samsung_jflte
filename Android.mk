@@ -2,6 +2,8 @@
 ifeq ($(TARGET_DEVICE),jfltetmo)
     include $(call all-makefiles-under,$(call my-dir))
 
+include $(CLEAR_VARS)
+
 # Create /firmware-mdm links
 FIRMWARE_MDM_IMAGES := \
     acdb.mbn \
