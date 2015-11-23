@@ -20,8 +20,8 @@ net.ppp0.dns2=8.8.4.4
 
 # Hardware
 ro.device.chipset=Qualcomm APQ8064T Snapdragon 600
-ro.device.cpu=ARMv7 Quad-Core 1.9 GHz Krait 300
+ro.device.cpu_info=Quad-Core 1.9 GHz Krait 300
 ro.device.gpu=Adreno 320
 ro.device.rear_cam=13 MP (4128x3096)
-ro.device.front_cam=2 MP (1280x960)
+ro.device.front_cam=2 MP (1600x1200)
 ro.device.screen_res=5" 1920x1080 pixels (~441 ppi)
