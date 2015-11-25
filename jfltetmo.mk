@@ -117,7 +117,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hwui.text_cache_width=2048 \
     ro.opengles.version=196608 \
     ro.sf.lcd_density=480 \
     debug.sf.hw=1 \
@@ -164,11 +163,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_short_ons_1="" \
     persist.rild.nitz_short_ons_2="" \
     persist.rild.nitz_short_ons_3=""
-
-# Recovery
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.cwm.enable_key_repeat=true \
-    ro.cwm.repeatable_keys=114,115
 
 # WiFi
 PRODUCT_PROPERTY_OVERRIDES += \
