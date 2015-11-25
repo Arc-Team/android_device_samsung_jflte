@@ -75,8 +75,7 @@ PRODUCT_PACKAGES += \
     SamsungDoze \
     libtime_genoff \
     charger_res_images \
-    libsamsung_symbols \
-    com.android.future.usb.accessory
+    libsamsung_symbols
 
 # Ramdisk
 PRODUCT_PACKAGES += \
