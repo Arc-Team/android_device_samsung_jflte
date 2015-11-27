@@ -385,18 +385,13 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/qseecomd:system/bin/qseecomd \
     device/samsung/jfltetmo/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
     device/samsung/jfltetmo/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
-    device/samsung/jfltetmo/prebuilt/lib/libDivxDrm.so:system/lib/libDivxDrm.so \
-    device/samsung/jfltetmo/prebuilt/lib/libExtendedExtractor.so:system/lib/libExtendedExtractor.so \
     device/samsung/jfltetmo/prebuilt/lib/libI420colorconvert.so:system/lib/libI420colorconvert.so \
     device/samsung/jfltetmo/prebuilt/lib/libQSEEComAPI.so:system/lib/libQSEEComAPI.so \
-    device/samsung/jfltetmo/prebuilt/lib/libSHIMDivxDrm.so:system/lib/libSHIMDivxDrm.so \
     device/samsung/jfltetmo/prebuilt/lib/libdivxdrmdecrypt.so:system/lib/libdivxdrmdecrypt.so \
     device/samsung/jfltetmo/prebuilt/lib/libdrmdecrypt.so:system/lib/libdrmdecrypt.so \
     device/samsung/jfltetmo/prebuilt/lib/libdrmfs.so:system/lib/libdrmfs.so \
     device/samsung/jfltetmo/prebuilt/lib/libdrmtime.so:system/lib/libdrmtime.so \
-    device/samsung/jfltetmo/prebuilt/lib/libmm-color-convertor.so:system/lib/libmm-color-convertor.so \
-    device/samsung/jfltetmo/prebuilt/lib/libmmosal.so:system/lib/libmmosal.so \
-    device/samsung/jfltetmo/prebuilt/lib/libmmparser.so:system/lib/libmmparser.so
+    device/samsung/jfltetmo/prebuilt/lib/libmm-color-convertor.so:system/lib/libmm-color-convertor.so
 
 # Radio/QMI
 PRODUCT_COPY_FILES += \
