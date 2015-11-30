@@ -135,7 +135,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=0 \
     ro.telephony.default_network=9 \
     ro.telephony.mms_data_profile=5 \
-    ro.telephony.ril.config=newDriverCallU,newDialCode \
     ro.telephony.ril_class=jflteRIL \
     telephony.lteOnGsmDevice=1
 
