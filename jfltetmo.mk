@@ -85,10 +85,6 @@ PRODUCT_PACKAGES += \
     init.jfltetmo.usb.rc \
     ueventd.jfltetmo.rc
 
-# Filesystem
-PRODUCT_PACKAGES += \
-    make_ext4fs
-
 # IPv6 tethering
 PRODUCT_PACKAGES += \
     ebtables \
