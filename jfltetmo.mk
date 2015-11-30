@@ -260,12 +260,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/irsc_util:system/bin/irsc_util \
     device/samsung/jfltetmo/prebuilt/etc/sec_config:system/etc/sec_config
 
-# Postprocessing
-PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/prebuilt/bin/mm-pp-daemon:system/bin/mm-pp-daemon \
-    device/samsung/jfltetmo/prebuilt/lib/libmm-abl-oem.so:system/lib/libmm-abl-oem.so \
-    device/samsung/jfltetmo/prebuilt/lib/libmm-abl.so:system/lib/libmm-abl.so
-
 # Time
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/time_daemon:system/bin/time_daemon \
