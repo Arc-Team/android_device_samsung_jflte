@@ -429,10 +429,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth firmware
 PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/prebuilt/vendor/firmware/bcm4335.hcd:system/vendor/firmware/bcm4335.hcd \
-    device/samsung/jfltetmo/prebuilt/vendor/firmware/bcm4335_murata.hcd:system/vendor/firmware/bcm4335_murata.hcd \
-    device/samsung/jfltetmo/prebuilt/vendor/firmware/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd \
-    device/samsung/jfltetmo/prebuilt/vendor/firmware/bcm4335_semco.hcd:system/vendor/firmware/bcm4335_semco.hcd
+    device/samsung/jfltetmo/prebuilt/vendor/firmware/bcm4335_V0343.0353.hcd:system/vendor/firmware/bcm4335_V0343.0353.hcd \
+    device/samsung/jfltetmo/prebuilt/vendor/firmware/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
 
 # NFC
 PRODUCT_COPY_FILES += \
