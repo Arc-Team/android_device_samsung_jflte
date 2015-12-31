@@ -122,6 +122,7 @@ TW_CRYPTO_FS_TYPE := "ext4"
 TW_CRYPTO_KEY_LOC := "footer"
 TW_CRYPTO_MNT_POINT := "/data"
 TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/msm_sdcc.1/by-name/userdata"
+TW_EXCLUDE_SUPERSU := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_SAMSUNG := true
