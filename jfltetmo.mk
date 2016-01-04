@@ -364,6 +364,7 @@ PRODUCT_COPY_FILES += \
 # Media
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
+    device/samsung/jfltetmo/prebuilt/etc/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     device/samsung/jfltetmo/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
     device/samsung/jfltetmo/prebuilt/lib/libDivxDrm.so:system/lib/libDivxDrm.so \
     device/samsung/jfltetmo/prebuilt/lib/libI420colorconvert.so:system/lib/libI420colorconvert.so \
