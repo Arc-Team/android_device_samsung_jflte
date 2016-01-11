@@ -179,6 +179,7 @@ TARGET_SPECIFIC_HEADER_PATH += device/samsung/jfltetmo/include
 
 # RIL
 BOARD_RIL_CLASS := ../../../device/samsung/jfltetmo/ril
+USE_DEVICE_SPECIFIC_DATASERVICES := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
