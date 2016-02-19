@@ -231,6 +231,10 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/srm.bin:system/etc/srm.bin \
     device/samsung/jfltetmo/prebuilt/lib/libhdcp2.so:system/lib/libhdcp2.so
 
+# SPN override
+PRODUCT_COPY_FILES += \
+    device/samsung/jfltetmo/prebuilt/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
+
 # Dalvik-Hack
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/init.d/01dalvik:system/etc/init.d/01dalvik
