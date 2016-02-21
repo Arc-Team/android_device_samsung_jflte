@@ -18,6 +18,7 @@ BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := androidboot.hardware=jfltetmo user_debug=31 zcache msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/jfltetmo/mkbootimg.mk
 TARGET_KERNEL_SOURCE := kernel/samsung/jflte
 TARGET_KERNEL_CONFIG := jf_defconfig
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.9-cortex-a15
@@ -97,7 +98,7 @@ endif
 
 # TWRP
 BOARD_HAS_NO_REAL_SDCARD := true
-BOARD_SUPPRESS_EMMC_WIPE := true
+BOARD_SUPPRESS_SECURE_ERASE := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/file
