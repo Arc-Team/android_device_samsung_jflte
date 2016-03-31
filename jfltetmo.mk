@@ -238,10 +238,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/srm.bin:system/etc/srm.bin \
     device/samsung/jfltetmo/prebuilt/lib/libhdcp2.so:system/lib/libhdcp2.so
 
-# CRDA
-PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/prebuilt/etc/init.crda.sh:system/etc/init.crda.sh
-
 # Dalvik-Hack
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/init.d/01dalvik:system/etc/init.d/01dalvik
