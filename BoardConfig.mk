@@ -153,7 +153,7 @@ TARGET_PROVIDES_LIBLIGHT := true
 PREBUILT_WEBVIEW_VERSION := beta
 
 # Healthd
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
 
 # CMHW
 BOARD_HARDWARE_CLASS += device/samsung/jfltetmo/cmhw
