@@ -66,6 +66,7 @@ PRODUCT_PACKAGES += \
 # Misc
 PRODUCT_PACKAGES += \
     Snap \
+    Gello \
     TimeService \
     SamsungDoze \
     libtime_genoff \
