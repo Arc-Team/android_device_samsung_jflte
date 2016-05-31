@@ -451,6 +451,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libOpenVG.so:system/vendor/lib/libOpenVG.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
+    device/samsung/jfltetmo/prebuilt/vendor/lib/libbccQTI.so:system/vendor/lib/libbccQTI.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libc2d30.so:system/vendor/lib/libc2d30.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libgsl.so:system/vendor/lib/libgsl.so \
