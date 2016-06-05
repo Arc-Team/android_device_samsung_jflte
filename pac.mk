@@ -11,7 +11,7 @@ $(call inherit-product, device/samsung/jfltetmo/jfltetmo.mk)
 PRODUCT_RELEASE_NAME := jfltetmo
 
 # Bootanimation
-TARGET_BOOTANIMATION_NAME := 1080
+PAC_BOOTANIMATION_NAME := 1080
 
 # Device Naming
 PRODUCT_DEVICE := jfltetmo
