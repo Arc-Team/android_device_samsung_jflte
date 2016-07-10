@@ -213,12 +213,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/rootdir/fstab.f2fs:root/fstab.jfltetmo
 endif
 
-# Bins
-PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/prebuilt/bin/mpdecision:system/bin/mpdecision \
-    device/samsung/jfltetmo/prebuilt/bin/radish:system/bin/radish \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libqti-perfd-client.so:system/vendor/lib/libqti-perfd-client.so
-
 # Wi-Fi
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/wifi/bcmdhd_apsta.bin:system/etc/wifi/bcmdhd_apsta.bin \
@@ -249,10 +243,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/init.d/81clean:system/etc/init.d/81clean
 
-# IPC
+# Perf
 PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/prebuilt/bin/irsc_util:system/bin/irsc_util \
-    device/samsung/jfltetmo/prebuilt/etc/sec_config:system/etc/sec_config
+    device/samsung/jfltetmo/prebuilt/bin/mpdecision:system/bin/mpdecision \
+    device/samsung/jfltetmo/prebuilt/vendor/lib/libqti-perfd-client.so:system/vendor/lib/libqti-perfd-client.so
 
 # Time
 PRODUCT_COPY_FILES += \
@@ -264,6 +258,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf \
     device/samsung/jfltetmo/prebuilt/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
+    device/samsung/jfltetmo/prebuilt/lib/libadsprpc.so:system/lib/libadsprpc.so \
     device/samsung/jfltetmo/prebuilt/lib/libacdbloader.so:system/lib/libacdbloader.so \
     device/samsung/jfltetmo/prebuilt/lib/libaudcal.so:system/lib/libaudcal.so \
     device/samsung/jfltetmo/prebuilt/lib/libcsd-client.so:system/lib/libcsd-client.so
@@ -279,7 +274,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/cameradata/datapattern_420sp.yuv:system/cameradata/datapattern_420sp.yuv \
     device/samsung/jfltetmo/prebuilt/cameradata/datapattern_front_420sp.yuv:system/cameradata/datapattern_front_420sp.yuv \
     device/samsung/jfltetmo/prebuilt/lib/hw/camera.vendor.msm8960.so:system/lib/hw/camera.vendor.msm8960.so \
-    device/samsung/jfltetmo/prebuilt/lib/libadsprpc.so:system/lib/libadsprpc.so \
     device/samsung/jfltetmo/prebuilt/lib/libgemini.so:system/lib/libgemini.so \
     device/samsung/jfltetmo/prebuilt/lib/libimage-jpeg-enc-omx-comp.so:system/lib/libimage-jpeg-enc-omx-comp.so \
     device/samsung/jfltetmo/prebuilt/lib/libimage-omx-common.so:system/lib/libimage-omx-common.so \
@@ -356,48 +350,57 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/vendor/lib/liblbs_core.so:system/vendor/lib/liblbs_core.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/liblocationservice.so:system/vendor/lib/liblocationservice.so
 
-# Media
+# DRM
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/qseecomd:system/bin/qseecomd \
+    device/samsung/jfltetmo/prebuilt/lib/libdrmfs.so:system/lib/libdrmfs.so \
+    device/samsung/jfltetmo/prebuilt/lib/libdrmtime.so:system/lib/libdrmtime.so \
+    device/samsung/jfltetmo/prebuilt/lib/libQSEEComAPI.so:system/lib/libQSEEComAPI.so
+
+# Media
+PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
     device/samsung/jfltetmo/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
     device/samsung/jfltetmo/prebuilt/lib/libDivxDrm.so:system/lib/libDivxDrm.so \
     device/samsung/jfltetmo/prebuilt/lib/libI420colorconvert.so:system/lib/libI420colorconvert.so \
-    device/samsung/jfltetmo/prebuilt/lib/libQSEEComAPI.so:system/lib/libQSEEComAPI.so \
     device/samsung/jfltetmo/prebuilt/lib/libSHIMDivxDrm.so:system/lib/libSHIMDivxDrm.so \
-    device/samsung/jfltetmo/prebuilt/lib/libdrmfs.so:system/lib/libdrmfs.so \
-    device/samsung/jfltetmo/prebuilt/lib/libdrmtime.so:system/lib/libdrmtime.so \
     device/samsung/jfltetmo/prebuilt/lib/libmm-color-convertor.so:system/lib/libmm-color-convertor.so \
     device/samsung/jfltetmo/prebuilt/lib/libmmosal.so:system/lib/libmmosal.so
 
-# Radio/QMI
+# Radio
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/efsks:system/bin/efsks \
     device/samsung/jfltetmo/prebuilt/bin/ks:system/bin/ks \
     device/samsung/jfltetmo/prebuilt/bin/netmgrd:system/bin/netmgrd \
     device/samsung/jfltetmo/prebuilt/bin/qcks:system/bin/qcks \
     device/samsung/jfltetmo/prebuilt/bin/qmuxd:system/bin/qmuxd \
+    device/samsung/jfltetmo/prebuilt/bin/radish:system/bin/radish \
     device/samsung/jfltetmo/prebuilt/bin/rild:system/bin/rild \
     device/samsung/jfltetmo/prebuilt/bin/rmt_storage:system/bin/rmt_storage \
     device/samsung/jfltetmo/prebuilt/lib/libatparser.so:system/lib/libatparser.so \
-    device/samsung/jfltetmo/prebuilt/lib/libdsi_netctrl.so:system/lib/libdsi_netctrl.so \
-    device/samsung/jfltetmo/prebuilt/lib/libdsutils.so:system/lib/libdsutils.so \
     device/samsung/jfltetmo/prebuilt/lib/libfactoryutil.so:system/lib/libfactoryutil.so \
-    device/samsung/jfltetmo/prebuilt/lib/libidl.so:system/lib/libidl.so \
     device/samsung/jfltetmo/prebuilt/lib/libnetmgr.so:system/lib/libnetmgr.so \
     device/samsung/jfltetmo/prebuilt/lib/libomission_avoidance.so:system/lib/libomission_avoidance.so \
+    device/samsung/jfltetmo/prebuilt/lib/libreference-ril.so:system/lib/libreference-ril.so \
+    device/samsung/jfltetmo/prebuilt/lib/libril-qc-qmi-1.so:system/lib/libril-qc-qmi-1.so \
+    device/samsung/jfltetmo/prebuilt/lib/libril-qcril-external.so:system/lib/libril-qcril-external.so \
+    device/samsung/jfltetmo/prebuilt/lib/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \
+    device/samsung/jfltetmo/prebuilt/lib/libril.so:system/lib/libril.so \
+    device/samsung/jfltetmo/prebuilt/lib/libsecril-client.so:system/lib/libsecril-client.so
+
+# Qualcomm framework
+PRODUCT_COPY_FILES += \
+    device/samsung/jfltetmo/prebuilt/bin/irsc_util:system/bin/irsc_util \
+    device/samsung/jfltetmo/prebuilt/etc/sec_config:system/etc/sec_config \
+    device/samsung/jfltetmo/prebuilt/lib/libdsi_netctrl.so:system/lib/libdsi_netctrl.so \
+    device/samsung/jfltetmo/prebuilt/lib/libdsutils.so:system/lib/libdsutils.so \
+    device/samsung/jfltetmo/prebuilt/lib/libidl.so:system/lib/libidl.so \
     device/samsung/jfltetmo/prebuilt/lib/libqcci_legacy.so:system/lib/libqcci_legacy.so \
     device/samsung/jfltetmo/prebuilt/lib/libqdi.so:system/lib/libqdi.so \
     device/samsung/jfltetmo/prebuilt/lib/libqdp.so:system/lib/libqdp.so \
     device/samsung/jfltetmo/prebuilt/lib/libqmi.so:system/lib/libqmi.so \
     device/samsung/jfltetmo/prebuilt/lib/libqmi_client_qmux.so:system/lib/libqmi_client_qmux.so \
     device/samsung/jfltetmo/prebuilt/lib/libqmiservices.so:system/lib/libqmiservices.so \
-    device/samsung/jfltetmo/prebuilt/lib/libreference-ril.so:system/lib/libreference-ril.so \
-    device/samsung/jfltetmo/prebuilt/lib/libril-qc-qmi-1.so:system/lib/libril-qc-qmi-1.so \
-    device/samsung/jfltetmo/prebuilt/lib/libril-qcril-external.so:system/lib/libril-qcril-external.so \
-    device/samsung/jfltetmo/prebuilt/lib/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \
-    device/samsung/jfltetmo/prebuilt/lib/libril.so:system/lib/libril.so \
-    device/samsung/jfltetmo/prebuilt/lib/libsecril-client.so:system/lib/libsecril-client.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libdiag.so:system/vendor/lib/libdiag.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libqmi_cci.so:system/vendor/lib/libqmi_cci.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libqmi_common_so.so:system/vendor/lib/libqmi_common_so.so \
