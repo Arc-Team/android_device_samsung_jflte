@@ -10,7 +10,8 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8960 \
     audio.r_submix.default \
     audio.usb.default \
-    libaudio-resampler
+    libaudio-resampler \
+    libqcomvoiceprocessing
 
 # MSM8960
 PRODUCT_PACKAGES += \
@@ -178,12 +179,14 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
+    device/samsung/jfltetmo/prebuilt/etc/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     device/samsung/jfltetmo/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf \
-    device/samsung/jfltetmo/prebuilt/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
+    device/samsung/jfltetmo/prebuilt/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/samsung/jfltetmo/prebuilt/lib/libadsprpc.so:system/lib/libadsprpc.so \
     device/samsung/jfltetmo/prebuilt/lib/libacdbloader.so:system/lib/libacdbloader.so \
     device/samsung/jfltetmo/prebuilt/lib/libaudcal.so:system/lib/libaudcal.so \
-    device/samsung/jfltetmo/prebuilt/lib/libcsd-client.so:system/lib/libcsd-client.so
+    device/samsung/jfltetmo/prebuilt/lib/libcsd-client.so:system/lib/libcsd-client.so \
+    device/samsung/jfltetmo/prebuilt/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 # Camera
 PRODUCT_COPY_FILES += \
