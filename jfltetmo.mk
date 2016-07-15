@@ -359,11 +359,8 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
     device/samsung/jfltetmo/prebuilt/etc/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     device/samsung/jfltetmo/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
-    device/samsung/jfltetmo/prebuilt/lib/libDivxDrm.so:system/lib/libDivxDrm.so \
     device/samsung/jfltetmo/prebuilt/lib/libI420colorconvert.so:system/lib/libI420colorconvert.so \
-    device/samsung/jfltetmo/prebuilt/lib/libSHIMDivxDrm.so:system/lib/libSHIMDivxDrm.so \
-    device/samsung/jfltetmo/prebuilt/lib/libmm-color-convertor.so:system/lib/libmm-color-convertor.so \
-    device/samsung/jfltetmo/prebuilt/lib/libmmosal.so:system/lib/libmmosal.so
+    device/samsung/jfltetmo/prebuilt/lib/libmm-color-convertor.so:system/lib/libmm-color-convertor.so
 
 # Radio
 PRODUCT_COPY_FILES += \
