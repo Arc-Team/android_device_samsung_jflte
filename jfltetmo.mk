@@ -440,6 +440,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/vendor/lib/egl/libEGL_adreno.so:system/vendor/lib/egl/libEGL_adreno.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/egl/libGLESv1_CM_adreno.so:system/vendor/lib/egl/libGLESv1_CM_adreno.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/egl/libGLESv2_adreno.so:system/vendor/lib/egl/libGLESv2_adreno.so \
+    device/samsung/jfltetmo/prebuilt/vendor/lib/egl/libplayback_adreno.so:system/vendor/lib/egl/libplayback_adreno.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/egl/libq3dtools_adreno.so:system/vendor/lib/egl/libq3dtools_adreno.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libC2D2.so:system/vendor/lib/libC2D2.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libCB.so:system/vendor/lib/libCB.so \
@@ -447,6 +448,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libbccQTI.so:system/vendor/lib/libbccQTI.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
+    device/samsung/jfltetmo/prebuilt/vendor/lib/libc2d30.so:system/vendor/lib/libc2d30.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libgsl.so:system/vendor/lib/libgsl.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libllvm-qcom.so:system/vendor/lib/libllvm-qcom.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/librs_adreno.so:system/vendor/lib/librs_adreno.so \
