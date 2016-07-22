@@ -49,7 +49,6 @@ on boot
     start qcamerasvr
 
     # Permissions for bluetooth.
-    setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
     chown bluetooth net_bt_stack ro.bt.bdaddr_path
     chown bluetooth net_bt_stack /dev/ttyHS0
     chmod 0660 /dev/ttyHS0
@@ -358,7 +357,6 @@ on post-fs-data
     chmod 0660 /sys/class/timed_output/vibrator/pwm_value
 
     # NFC_NXP
-    setprop ro.nfc.port "I2C"
     chmod 0600 /dev/pn544
     chown nfc nfc /dev/pn544
 
