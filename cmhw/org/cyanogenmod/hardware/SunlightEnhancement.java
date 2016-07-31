@@ -16,11 +16,7 @@
 
 package org.cyanogenmod.hardware;
 
-import org.cyanogenmod.hardware.util.FileUtils;
-
-import android.os.SystemProperties;
-
-import java.io.File;
+import org.cyanogenmod.internal.util.FileUtils;
 
 /**
  * Sunlight Readability Enhancement support, aka Facemelt Mode.
@@ -30,7 +26,9 @@ import java.io.File;
  * support.
  */
 public class SunlightEnhancement {
-    private static final String sOutdoorModePath = "/sys/class/mdnie/mdnie/outdoor";
+
+    private static final String FILE_SRE = "/sys/class/mdnie/mdnie/outdoor";
+    private static final String FILE_HBM = "/sys/class/lcd/panel/panel/auto_brightness";
 
     /**
      * Whether device supports SRE
@@ -38,7 +36,10 @@ public class SunlightEnhancement {
      * @return boolean Supported devices must return always true
      */
     public static boolean isSupported() {
-        return new File(sOutdoorModePath).exists();
+        return FileUtils.isFileWritable(FILE_SRE) &&
+                FileUtils.isFileReadable(FILE_SRE) &&
+                FileUtils.isFileWritable(FILE_HBM) &&
+                FileUtils.isFileReadable(FILE_HBM);
     }
 
     /**
@@ -48,10 +49,8 @@ public class SunlightEnhancement {
      * the operation failed while reading the status; true in any other case.
      */
     public static boolean isEnabled() {
-        String line = FileUtils.readOneLine(sOutdoorModePath);
-        if (line == null)
-            return false;
-        return line.equals("1");
+        return "1".equals(FileUtils.readOneLine(FILE_SRE)) &&
+                "6".equals(FileUtils.readOneLine(FILE_HBM));
     }
 
     /**
@@ -62,13 +61,14 @@ public class SunlightEnhancement {
      * failed; true in any other case.
      */
     public static boolean setEnabled(boolean status) {
-        return FileUtils.writeLine(sOutdoorModePath, status ? "1" : "0");
+        return FileUtils.writeLine(FILE_SRE, status ? "1" : "0") &&
+                FileUtils.writeLine(FILE_HBM, status ? "6" : "0");
     }
 
     /**
      * Whether adaptive backlight (CABL / CABC) is required to be enabled
      *
-     * @return boolean False if adaptive backlight is not a dependency
+     * @return boolean false if adaptive backlight is not a dependency
      */
     public static boolean isAdaptiveBacklightRequired() {
         return false;
