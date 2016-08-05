@@ -37,7 +37,6 @@ BOARD_BLUEDROID_VENDOR_CONF := device/samsung/jfltetmo/bluetooth/vnd_jf.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/jfltetmo/bluetooth
 
 # Graphics
-USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 
