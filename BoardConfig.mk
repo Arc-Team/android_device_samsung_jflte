@@ -65,10 +65,8 @@ WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/dhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_STA := "/system/etc/wifi/bcmdhd_sta.bin"
 
 # Partitions
-#BLOCK_BASED_OTA := false
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-#TARGET_CUSTOM_SYSTEM_FORMAT := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2894069760
@@ -79,11 +77,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # Recovery
 BOARD_HAS_DOWNLOAD_MODE := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-ifeq ($(TARGET_CUSTOM_SYSTEM_FORMAT),true)
-    TARGET_RECOVERY_FSTAB := device/samsung/jfltetmo/rootdir/fstab.f2fs
-else
-    TARGET_RECOVERY_FSTAB := device/samsung/jfltetmo/rootdir/fstab.jfltetmo
-endif
+TARGET_RECOVERY_FSTAB := device/samsung/jfltetmo/rootdir/fstab.jfltetmo
 
 # TWRP
 BOARD_HAS_NO_REAL_SDCARD := true
