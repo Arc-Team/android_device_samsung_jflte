@@ -131,9 +131,6 @@ TARGET_POWERHAL_VARIANT := qcom
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# WebView version
-PREBUILT_WEBVIEW_VERSION := beta
-
 # Healthd
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
 
