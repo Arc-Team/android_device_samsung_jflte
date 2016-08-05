@@ -164,18 +164,21 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/mpdecision:system/bin/mpdecision \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libqti-perfd-client.so:system/vendor/lib/libqti-perfd-client.so
 
-# Time
+# Time services
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/time_daemon:system/bin/time_daemon \
     device/samsung/jfltetmo/prebuilt/lib/libTimeService.so:system/lib/libTimeService.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libtime_genoff.so:system/vendor/lib/libtime_genoff.so
+
+# ADSP
+PRODUCT_COPY_FILES += \
+    device/samsung/jfltetmo/prebuilt/lib/libadsprpc.so:system/lib/libadsprpc.so
 
 # Audio
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     device/samsung/jfltetmo/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf \
     device/samsung/jfltetmo/prebuilt/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
-    device/samsung/jfltetmo/prebuilt/lib/libadsprpc.so:system/lib/libadsprpc.so \
     device/samsung/jfltetmo/prebuilt/lib/libacdbloader.so:system/lib/libacdbloader.so \
     device/samsung/jfltetmo/prebuilt/lib/libaudcal.so:system/lib/libaudcal.so \
     device/samsung/jfltetmo/prebuilt/lib/libcsd-client.so:system/lib/libcsd-client.so \
@@ -214,7 +217,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
     device/samsung/jfltetmo/prebuilt/lib/libvdis.so:system/lib/libvdis.so
 
-# Chromatix
+# Camera chromatix
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/lib/libchromatix_imx074_default_video.so:system/lib/libchromatix_imx074_default_video.so \
     device/samsung/jfltetmo/prebuilt/lib/libchromatix_imx074_preview.so:system/lib/libchromatix_imx074_preview.so \
@@ -277,11 +280,14 @@ PRODUCT_COPY_FILES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    device/samsung/jfltetmo/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
-    device/samsung/jfltetmo/prebuilt/etc/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    device/samsung/jfltetmo/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
     device/samsung/jfltetmo/prebuilt/lib/libI420colorconvert.so:system/lib/libI420colorconvert.so \
     device/samsung/jfltetmo/prebuilt/lib/libmm-color-convertor.so:system/lib/libmm-color-convertor.so
+
+# Media Profile
+PRODUCT_COPY_FILES += \
+    device/samsung/jfltetmo/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
+    device/samsung/jfltetmo/prebuilt/etc/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+    device/samsung/jfltetmo/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
 
 # Radio
 PRODUCT_COPY_FILES += \
@@ -353,9 +359,9 @@ PRODUCT_COPY_FILES += \
 # NFC firmware
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/vendor/firmware/bcm2079xB4_firmware.ncd:system/vendor/firmware/bcm2079xB4_firmware.ncd \
-    device/samsung/jfltetmo/prebuilt/vendor/firmware/bcm2079xB4_pre_firmware.ncd:system/vendor/firmware/bcm2079xB4_pre_firmware.ncd \
+    device/samsung/jfltetmo/prebuilt/vendor/firmware/bcm2079xB4_pre_firmware.ncd:system/vendor/firmware/bcm2079xB4_pre_firmware.ncd
 
-# GPU
+# Graphics
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/vendor/lib/egl/eglsubAndroid.so:system/vendor/lib/egl/eglsubAndroid.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/egl/libEGL_adreno.so:system/vendor/lib/egl/libEGL_adreno.so \
@@ -376,7 +382,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/vendor/lib/librs_adreno_sha1.so:system/vendor/lib/librs_adreno_sha1.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so
 
-# GPU Firmware
+# Graphics firmware
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/etc/firmware/a300_pfp.fw:system/etc/firmware/a300_pfp.fw \
     device/samsung/jfltetmo/prebuilt/etc/firmware/a300_pm4.fw:system/etc/firmware/a300_pm4.fw \
