@@ -21,7 +21,7 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/jfltetmo/mkbootimg.mk
 TARGET_KERNEL_SOURCE := kernel/samsung/jflte
-TARGET_KERNEL_CONFIG := jf_defconfig
+TARGET_KERNEL_CONFIG := jflte_defconfig
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.9-cortex-a15
 
 # Audio
