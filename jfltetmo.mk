@@ -64,7 +64,6 @@ PRODUCT_PACKAGES += \
     libstlport \
     TimeService \
     SamsungDoze \
-    charger_res_images \
     libshim_ril
 
 # Ramdisk
