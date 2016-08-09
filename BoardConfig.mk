@@ -131,9 +131,6 @@ TARGET_PROVIDES_LIBLIGHT := true
 # Time
 BOARD_USES_QC_TIME_SERVICES := true
 
-# Healthd
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
-
 # CMHW
 BOARD_HARDWARE_CLASS += device/samsung/jfltetmo/cmhw
 
