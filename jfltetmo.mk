@@ -382,7 +382,8 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/vendor/lib/libllvm-qcom.so:system/vendor/lib/libllvm-qcom.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/librs_adreno.so:system/vendor/lib/librs_adreno.so \
     device/samsung/jfltetmo/prebuilt/vendor/lib/librs_adreno_sha1.so:system/vendor/lib/librs_adreno_sha1.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so
+    device/samsung/jfltetmo/prebuilt/vendor/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so \
+    device/samsung/jfltetmo/prebuilt/vendor/lib/libuiblur.so:system/vendor/lib/libuiblur.so
 
 # Graphics firmware
 PRODUCT_COPY_FILES += \
