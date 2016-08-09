@@ -73,6 +73,7 @@ PRODUCT_PACKAGES += \
     init.jfltetmo.rc \
     init.jfltetmo.power.rc \
     init.jfltetmo.usb.rc \
+    init.recovery.jfltetmo.rc \
     ueventd.jfltetmo.rc
 
 # IPv6 tethering
