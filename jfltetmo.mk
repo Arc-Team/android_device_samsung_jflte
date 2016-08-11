@@ -299,7 +299,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/qmuxd:system/bin/qmuxd \
     device/samsung/jfltetmo/prebuilt/bin/radish:system/bin/radish \
     device/samsung/jfltetmo/prebuilt/bin/rild:system/bin/rild \
-    device/samsung/jfltetmo/prebuilt/bin/rmt_storage:system/bin/rmt_storage \
     device/samsung/jfltetmo/prebuilt/lib/libatparser.so:system/lib/libatparser.so \
     device/samsung/jfltetmo/prebuilt/lib/libfactoryutil.so:system/lib/libfactoryutil.so \
     device/samsung/jfltetmo/prebuilt/lib/libnetmgr.so:system/lib/libnetmgr.so \
