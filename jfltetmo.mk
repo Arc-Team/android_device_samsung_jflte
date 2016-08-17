@@ -64,7 +64,6 @@ PRODUCT_PACKAGES += \
     libstlport \
     TimeService \
     SamsungDoze \
-    libtime_genoff \
     charger_res_images \
     libsamsung_symbols
 
