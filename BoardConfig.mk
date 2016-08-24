@@ -127,6 +127,9 @@ TARGET_POWERHAL_VARIANT := qcom
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Time
+BOARD_USES_QC_TIME_SERVICES := true
+
 # Healthd
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
 
