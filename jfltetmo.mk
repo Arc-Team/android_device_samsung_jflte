@@ -62,6 +62,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap \
     libstlport \
+    libtime_genoff \
     TimeService \
     SamsungDoze \
     libshim_ril
@@ -168,8 +169,7 @@ PRODUCT_COPY_FILES += \
 # Time services
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/time_daemon:system/bin/time_daemon \
-    device/samsung/jfltetmo/prebuilt/lib/libTimeService.so:system/lib/libTimeService.so \
-    device/samsung/jfltetmo/prebuilt/vendor/lib/libtime_genoff.so:system/vendor/lib/libtime_genoff.so
+    device/samsung/jfltetmo/prebuilt/lib/libTimeService.so:system/lib/libTimeService.so
 
 # ADSP
 PRODUCT_COPY_FILES += \
