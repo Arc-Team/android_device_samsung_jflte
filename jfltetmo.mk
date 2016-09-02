@@ -65,7 +65,7 @@ PRODUCT_PACKAGES += \
     TimeService \
     SamsungDoze \
     charger_res_images \
-    libsamsung_symbols
+    libshim_ril
 
 # Ramdisk
 PRODUCT_PACKAGES += \
