@@ -261,7 +261,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/jfltetmo/prebuilt/bin/loc_launcher:system/bin/loc_launcher \
     device/samsung/jfltetmo/prebuilt/etc/gps.conf:/system/etc/gps.conf \
-    device/samsung/jfltetmo/prebuilt/etc/izat.conf:/system/etc/izat.conf \
     device/samsung/jfltetmo/prebuilt/etc/sap.conf:/system/etc/sap.conf \
     device/samsung/jfltetmo/prebuilt/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
     device/samsung/jfltetmo/prebuilt/lib/libgps.utils.so:system/lib/libgps.utils.so \
